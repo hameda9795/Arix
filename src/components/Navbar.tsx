@@ -37,20 +37,20 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20 sm:h-24">
+        <div className="flex items-center justify-between h-24 sm:h-28">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 z-50">
             {/* Desktop logo */}
             <img
               src={scrolled ? "/images/logo.png" : "/images/logo-white.png"}
               alt="Arix Schilderbedrijf"
-              className="hidden sm:block h-16 lg:h-20 transition-all duration-300"
+              className="hidden sm:block h-20 lg:h-24 transition-all duration-300"
             />
             {/* Mobile logo */}
             <img
               src={scrolled ? "/images/logo.png" : "/images/logo-white.png"}
               alt="Arix Schilderbedrijf"
-              className="sm:hidden h-12 transition-all duration-300"
+              className="sm:hidden h-16 transition-all duration-300"
             />
           </Link>
 
