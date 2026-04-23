@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import ServicePageLayout from "@/components/ServicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Sausklaar Stucwerk | Arix Schilderbedrijf",
+  title: "Sausklaar Stucwerk | ARIX-SCHILDERSBEDRIJF",
   description:
-    "De specialist in sauzen in de regio Barneveld. Muren en plafonds perfect egaal sauzen door Arix Schilderbedrijf.",
+    "De specialist in sauzen in de regio Barneveld. Muren en plafonds perfect egaal sauzen door ARIX-SCHILDERSBEDRIJF.",
   openGraph: {
     type: "website",
     url: "/diensten/sausklaar-stucwerk",
-    title: "Sausklaar Stucwerk | Arix Schilderbedrijf",
+    title: "Sausklaar Stucwerk | ARIX-SCHILDERSBEDRIJF",
     description:
       "De specialist in sauzen in de regio Barneveld. Muren en plafonds perfect egaal sauzen.",
     images: [
@@ -16,13 +16,13 @@ export const metadata: Metadata = {
         url: "/images/hero-bg.webp",
         width: 1200,
         height: 630,
-        alt: "Arix Schilderbedrijf",
+        alt: "ARIX-SCHILDERSBEDRIJF",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sausklaar Stucwerk | Arix Schilderbedrijf",
+    title: "Sausklaar Stucwerk | ARIX-SCHILDERSBEDRIJF",
     description:
       "De specialist in sauzen in de regio Barneveld. Muren en plafonds perfect egaal sauzen.",
     images: ["/images/hero-bg.webp"],

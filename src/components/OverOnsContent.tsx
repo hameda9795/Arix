@@ -66,7 +66,7 @@ export default function OverOnsContent() {
             >
               <Image
                 src="/images/about.webp"
-                alt="Over Arix Schilderbedrijf"
+                alt="Over ARIX-SCHILDERSBEDRIJF"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -115,7 +115,7 @@ export default function OverOnsContent() {
                   Kwaliteit en vakmanschap
                 </h2>
                 <p className="text-text-light text-sm sm:text-base leading-relaxed">
-                  Arix-schildersbedrijf uit Zoelen staat garant voor kwaliteit
+                  Arix-schildersbedrijf uit Barneveld staat garant voor kwaliteit
                   en vakmanschap. Wij werken uitsluitend met de beste materialen
                   en hoogwaardige verfmerken om zo een duurzaam resultaat te
                   bekomen. Wij werken uw schilderproject thuis of op kantoor tot

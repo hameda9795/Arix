@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 
 const projects = [
-  { title: "Trap renovatie - Zoelen", tag: "Trap", image: "/images/project1.jpg", size: "large" },
+  { title: "Trap renovatie - Barneveld", tag: "Trap", image: "/images/project1.jpg", size: "large" },
   { title: "Houtrot reparatie", tag: "Houtrot", image: "/images/project2.jpg", size: "small" },
   { title: "Zolder transformatie", tag: "Zolder", image: "/images/project3.jpg", size: "small" },
 ];

@@ -3,29 +3,29 @@ import Link from "next/link";
 import { PaintBucket, SprayCan, Wallpaper, Hammer, Shapes } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Diensten | Arix Schilderbedrijf",
+  title: "Diensten | ARIX-SCHILDERSBEDRIJF",
   description:
-    "Bekijk alle diensten van Arix Schilderbedrijf: schilderwerk, spuitwerk, behangen, houtrot reparatie en sauzklaar stucwerk. Professioneel vakmanschap in Barneveld en omgeving.",
+    "Bekijk alle diensten van ARIX-SCHILDERSBEDRIJF: schilderwerk, spuitwerk, behangen, houtrot reparatie en sauzklaar stucwerk. Professioneel vakmanschap in Barneveld en omgeving.",
   openGraph: {
     type: "website",
     url: "/diensten",
-    title: "Diensten | Arix Schilderbedrijf",
+    title: "Diensten | ARIX-SCHILDERSBEDRIJF",
     description:
-      "Bekijk alle diensten van Arix Schilderbedrijf: schilderwerk, spuitwerk, behangen, houtrot reparatie en sauzklaar stucwerk.",
+      "Bekijk alle diensten van ARIX-SCHILDERSBEDRIJF: schilderwerk, spuitwerk, behangen, houtrot reparatie en sauzklaar stucwerk.",
     images: [
       {
         url: "/images/hero-bg.webp",
         width: 1200,
         height: 630,
-        alt: "Arix Schilderbedrijf",
+        alt: "ARIX-SCHILDERSBEDRIJF",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Diensten | Arix Schilderbedrijf",
+    title: "Diensten | ARIX-SCHILDERSBEDRIJF",
     description:
-      "Bekijk alle diensten van Arix Schilderbedrijf: schilderwerk, spuitwerk, behangen, houtrot reparatie en sauzklaar stucwerk.",
+      "Bekijk alle diensten van ARIX-SCHILDERSBEDRIJF: schilderwerk, spuitwerk, behangen, houtrot reparatie en sauzklaar stucwerk.",
     images: ["/images/hero-bg.webp"],
   },
   alternates: {
@@ -75,7 +75,7 @@ export default function DienstenPage() {
             Onze Diensten
           </h1>
           <p className="mt-4 text-lg text-text/80 max-w-2xl mx-auto">
-            Arix Schilderbedrijf biedt een breed scala aan schilderdiensten.
+            ARIX-SCHILDERSBEDRIJF biedt een breed scala aan schilderdiensten.
             Klik op een dienst hieronder voor meer informatie.
           </p>
         </div>

@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import ServicePageLayout from "@/components/ServicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Behangen & Wallpaper | Arix Schilderbedrijf",
+  title: "Behangen & Wallpaper | ARIX-SCHILDERSBEDRIJF",
   description:
-    "Expert in behangen in de regio Barneveld. Professioneel behangen met diverse materialen en patronen door Arix Schilderbedrijf.",
+    "Expert in behangen in de regio Barneveld. Professioneel behangen met diverse materialen en patronen door ARIX-SCHILDERSBEDRIJF.",
   openGraph: {
     type: "website",
     url: "/diensten/behangen",
-    title: "Behangen & Wallpaper | Arix Schilderbedrijf",
+    title: "Behangen & Wallpaper | ARIX-SCHILDERSBEDRIJF",
     description:
       "Expert in behangen in de regio Barneveld. Professioneel behangen met diverse materialen en patronen.",
     images: [
@@ -16,13 +16,13 @@ export const metadata: Metadata = {
         url: "/images/hero-bg.webp",
         width: 1200,
         height: 630,
-        alt: "Arix Schilderbedrijf",
+        alt: "ARIX-SCHILDERSBEDRIJF",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Behangen & Wallpaper | Arix Schilderbedrijf",
+    title: "Behangen & Wallpaper | ARIX-SCHILDERSBEDRIJF",
     description:
       "Expert in behangen in de regio Barneveld. Professioneel behangen met diverse materialen en patronen.",
     images: ["/images/hero-bg.webp"],

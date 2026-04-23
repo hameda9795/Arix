@@ -4,19 +4,19 @@ import ContactForm from "@/components/ContactForm";
 export const metadata: Metadata = {
   title: "Contact | Vrijblijvende Offerte Aanvragen",
   description:
-    "Neem contact op met Arix Schilderbedrijf voor een vrijblijvende offerte. Bel +31 6 45459815 of mail naar info@arix-schilderbedrijf.nl. Wij zijn gevestigd in Zoelen en actief in Barneveld, Tiel en Arnhem.",
+    "Neem contact op met ARIX-SCHILDERSBEDRIJF voor een vrijblijvende offerte. Bel +31 6 45459815 of mail naar info@arix-schildersbedrijf.nl. Wij zijn gevestigd in Barneveld en actief in Barneveld, Tiel en Arnhem.",
   openGraph: {
     type: "website",
     url: "/contact",
     title: "Contact | Vrijblijvende Offerte Aanvragen",
     description:
-      "Neem contact op met Arix Schilderbedrijf voor een vrijblijvende offerte. Bel +31 6 45459815 of mail naar info@arix-schilderbedrijf.nl.",
+      "Neem contact op met ARIX-SCHILDERSBEDRIJF voor een vrijblijvende offerte. Bel +31 6 45459815 of mail naar info@arix-schildersbedrijf.nl.",
     images: [
       {
         url: "/images/hero-bg.webp",
         width: 1200,
         height: 630,
-        alt: "Arix Schilderbedrijf",
+        alt: "ARIX-SCHILDERSBEDRIJF",
       },
     ],
   },
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Contact | Vrijblijvende Offerte Aanvragen",
     description:
-      "Neem contact op met Arix Schilderbedrijf voor een vrijblijvende offerte. Bel +31 6 45459815 of mail naar info@arix-schilderbedrijf.nl.",
+      "Neem contact op met ARIX-SCHILDERSBEDRIJF voor een vrijblijvende offerte. Bel +31 6 45459815 of mail naar info@arix-schildersbedrijf.nl.",
     images: ["/images/hero-bg.webp"],
   },
   alternates: {
@@ -35,23 +35,23 @@ export const metadata: Metadata = {
 const contactPageSchema = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
-  name: "Contact Arix Schilderbedrijf",
-  url: "https://arix-schilderbedrijf.nl/contact",
+  name: "Contact ARIX-SCHILDERSBEDRIJF",
+  url: "https://arix-schildersbedrijf.nl/contact",
   description:
-    "Neem contact op met Arix Schilderbedrijf voor een vrijblijvende offerte.",
+    "Neem contact op met ARIX-SCHILDERSBEDRIJF voor een vrijblijvende offerte.",
   mainEntity: {
     "@type": "LocalBusiness",
-    name: "Arix Schilderbedrijf",
-    image: "https://arix-schilderbedrijf.nl/images/hero-bg.webp",
-    url: "https://arix-schilderbedrijf.nl",
+    name: "ARIX-SCHILDERSBEDRIJF",
+    image: "https://arix-schildersbedrijf.nl/images/hero-bg.webp",
+    url: "https://arix-schildersbedrijf.nl",
     telephone: "+31645459815",
-    email: "info@arix-schilderbedrijf.nl",
+    email: "info@arix-schildersbedrijf.nl",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "De soel 21",
-      addressLocality: "Zoelen",
+      streetAddress: "Tusolaan 25",
+      addressLocality: "Barneveld",
       addressRegion: "Gelderland",
-      postalCode: "4011 GR",
+      postalCode: "3772WP",
       addressCountry: "NL",
     },
     geo: {

@@ -23,13 +23,13 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://arix-schilderbedrijf.nl"),
+  metadataBase: new URL("https://arix-schildersbedrijf.nl"),
   title: {
-    template: "%s | Arix Schilderbedrijf",
-    default: "Arix Schilderbedrijf | Professionele Schilders in Barneveld",
+    template: "%s | ARIX-SCHILDERSBEDRIJF",
+    default: "ARIX-SCHILDERSBEDRIJF | Professionele Schilders in Barneveld",
   },
   description:
-    "Arix-schildersbedrijf volbrengt al uw schilderwerken met succes. Meer dan tien jaar ervaring in schilderwerk, spuitwerk en behangen in Barneveld, Tiel en Arnhem.",
+    "ARIX-SCHILDERSBEDRIJF volbrengt al uw schilderwerken met succes. Meer dan tien jaar ervaring in schilderwerk, spuitwerk en behangen in Barneveld, Tiel en Arnhem.",
   keywords: [
     "schilder",
     "schilderwerk",
@@ -41,13 +41,13 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: {
-      template: "%s | Arix Schilderbedrijf",
-      default: "Arix Schilderbedrijf | Professionele Schilders in Barneveld",
+      template: "%s | ARIX-SCHILDERSBEDRIJF",
+      default: "ARIX-SCHILDERSBEDRIJF | Professionele Schilders in Barneveld",
     },
     description:
       "Arix-schildersbedrijf volbrengt al uw schilderwerken met succes. Meer dan tien jaar ervaring in schilderwerk, spuitwerk en behangen in Barneveld, Tiel en Arnhem.",
-    url: "https://arix-schilderbedrijf.nl",
-    siteName: "Arix Schilderbedrijf",
+    url: "https://arix-schildersbedrijf.nl",
+    siteName: "ARIX-SCHILDERSBEDRIJF",
     locale: "nl_NL",
     type: "website",
     images: [
@@ -55,15 +55,15 @@ export const metadata: Metadata = {
         url: "/images/hero-bg.webp",
         width: 1200,
         height: 630,
-        alt: "Arix Schilderbedrijf",
+        alt: "ARIX-SCHILDERSBEDRIJF",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: {
-      template: "%s | Arix Schilderbedrijf",
-      default: "Arix Schilderbedrijf | Professionele Schilders in Barneveld",
+      template: "%s | ARIX-SCHILDERSBEDRIJF",
+      default: "ARIX-SCHILDERSBEDRIJF | Professionele Schilders in Barneveld",
     },
     description:
       "Arix-schildersbedrijf volbrengt al uw schilderwerken met succes. Meer dan tien jaar ervaring in schilderwerk, spuitwerk en behangen in Barneveld, Tiel en Arnhem.",
@@ -77,9 +77,9 @@ export const metadata: Metadata = {
       follow: true,
     },
   },
-  authors: [{ name: "Arix Schilderbedrijf" }],
-  creator: "Arix Schilderbedrijf",
-  publisher: "Arix Schilderbedrijf",
+  authors: [{ name: "ARIX-SCHILDERSBEDRIJF" }],
+  creator: "ARIX-SCHILDERSBEDRIJF",
+  publisher: "ARIX-SCHILDERSBEDRIJF",
   alternates: {
     canonical: "/",
   },

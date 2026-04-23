@@ -24,14 +24,14 @@ export default function MapEmbed({
       } ${height}`}
     >
       <iframe
-        src="https://maps.google.com/maps?q=De+soel+21,+4011+GR+Zoelen&t=&z=15&ie=UTF8&iwloc=&output=embed"
+        src="https://maps.google.com/maps?q=Tusolaan+25,+3772WP+Barneveld&t=&z=15&ie=UTF8&iwloc=&output=embed"
         width="100%"
         height="100%"
         style={{ border: 0, filter: "grayscale(20%) contrast(1.05)" }}
         allowFullScreen
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
-        title="Arix Schilderbedrijf locatie"
+        title="ARIX-SCHILDERSBEDRIJF locatie"
       />
     </motion.div>
   );

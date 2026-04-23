@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import ServicePageLayout from "@/components/ServicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Houtrot Reparatie | Arix Schilderbedrijf",
+  title: "Houtrot Reparatie | ARIX-SCHILDERSBEDRIJF",
   description:
-    "Specialist in het behandelen en repareren van houtrot in Barneveld. Voorkom verdere schade met de expertise van Arix Schilderbedrijf.",
+    "Specialist in het behandelen en repareren van houtrot in Barneveld. Voorkom verdere schade met de expertise van ARIX-SCHILDERSBEDRIJF.",
   openGraph: {
     type: "website",
     url: "/diensten/houtrot",
-    title: "Houtrot Reparatie | Arix Schilderbedrijf",
+    title: "Houtrot Reparatie | ARIX-SCHILDERSBEDRIJF",
     description:
       "Specialist in het behandelen en repareren van houtrot in Barneveld. Voorkom verdere schade.",
     images: [
@@ -16,13 +16,13 @@ export const metadata: Metadata = {
         url: "/images/hero-bg.webp",
         width: 1200,
         height: 630,
-        alt: "Arix Schilderbedrijf",
+        alt: "ARIX-SCHILDERSBEDRIJF",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Houtrot Reparatie | Arix Schilderbedrijf",
+    title: "Houtrot Reparatie | ARIX-SCHILDERSBEDRIJF",
     description:
       "Specialist in het behandelen en repareren van houtrot in Barneveld. Voorkom verdere schade.",
     images: ["/images/hero-bg.webp"],

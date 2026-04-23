@@ -43,13 +43,13 @@ export default function Navbar() {
             {/* Desktop logo */}
             <img
               src={scrolled ? "/images/logo.png" : "/images/logo-white.png"}
-              alt="Arix Schilderbedrijf"
+              alt="ARIX-SCHILDERSBEDRIJF"
               className="hidden sm:block h-20 lg:h-24 transition-all duration-300"
             />
             {/* Mobile logo */}
             <img
               src={scrolled ? "/images/logo.png" : "/images/logo-white.png"}
-              alt="Arix Schilderbedrijf"
+              alt="ARIX-SCHILDERSBEDRIJF"
               className="sm:hidden h-16 transition-all duration-300"
             />
           </Link>

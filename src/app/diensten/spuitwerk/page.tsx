@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import ServicePageLayout from "@/components/ServicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Spuitwerk & Latex Spuiten | Arix Schilderbedrijf",
+  title: "Spuitwerk & Latex Spuiten | ARIX-SCHILDERSBEDRIJF",
   description:
-    "Latex spuitwerk in de regio Barneveld voor een egaal resultaat zonder strepen. Arix Schilderbedrijf levert vakmanschap en kwaliteit.",
+    "Latex spuitwerk in de regio Barneveld voor een egaal resultaat zonder strepen. ARIX-SCHILDERSBEDRIJF levert vakmanschap en kwaliteit.",
   openGraph: {
     type: "website",
     url: "/diensten/spuitwerk",
-    title: "Spuitwerk & Latex Spuiten | Arix Schilderbedrijf",
+    title: "Spuitwerk & Latex Spuiten | ARIX-SCHILDERSBEDRIJF",
     description:
       "Latex spuitwerk in de regio Barneveld voor een egaal resultaat zonder strepen.",
     images: [
@@ -16,13 +16,13 @@ export const metadata: Metadata = {
         url: "/images/hero-bg.webp",
         width: 1200,
         height: 630,
-        alt: "Arix Schilderbedrijf",
+        alt: "ARIX-SCHILDERSBEDRIJF",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Spuitwerk & Latex Spuiten | Arix Schilderbedrijf",
+    title: "Spuitwerk & Latex Spuiten | ARIX-SCHILDERSBEDRIJF",
     description:
       "Latex spuitwerk in de regio Barneveld voor een egaal resultaat zonder strepen.",
     images: ["/images/hero-bg.webp"],

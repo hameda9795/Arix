@@ -29,7 +29,7 @@ export default function Footer() {
             <Link href="/" className="inline-block mb-4">
               <img
                 src="/images/logo-white.png"
-                alt="Arix Schilderbedrijf"
+                alt="ARIX-SCHILDERSBEDRIJF"
                 className="h-32 sm:h-36"
               />
             </Link>
@@ -94,22 +94,22 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://maps.google.com/?q=De+soel+21,+4011+GR+Zoelen"
+                  href="https://maps.google.com/?q=Tusolaan+25,+3772WP+Barneveld"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-white/50 hover:text-white text-sm transition-colors"
                 >
                   <MapPin className="w-4 h-4 text-gold shrink-0" />
-                  De soel 21, 4011 GR Zoelen
+                  Tusolaan 25, 3772WP Barneveld
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:info@arix-schilderbedrijf.nl"
+                  href="mailto:info@arix-schildersbedrijf.nl"
                   className="flex items-center gap-3 text-white/50 hover:text-white text-sm transition-colors"
                 >
                   <Mail className="w-4 h-4 text-gold shrink-0" />
-                  info@arix-schilderbedrijf.nl
+                  info@arix-schildersbedrijf.nl
                 </a>
               </li>
             </ul>
@@ -120,7 +120,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-white/30 text-xs">
-            &copy; {new Date().getFullYear()} Arix Schilderbedrijf. Alle rechten
+            &copy; {new Date().getFullYear()} ARIX-SCHILDERSBEDRIJF. Alle rechten
             voorbehouden.
           </p>
           <p className="text-white/30 text-xs">

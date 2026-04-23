@@ -5,48 +5,48 @@ export const dynamic = "force-static";
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: "https://arix-schilderbedrijf.nl/",
+      url: "https://arix-schildersbedrijf.nl/",
       lastModified: new Date(),
       priority: 1.0,
       changeFrequency: "weekly",
     },
     {
-      url: "https://arix-schilderbedrijf.nl/over-ons",
+      url: "https://arix-schildersbedrijf.nl/over-ons",
       lastModified: new Date(),
       priority: 0.8,
     },
     {
-      url: "https://arix-schilderbedrijf.nl/projecten",
+      url: "https://arix-schildersbedrijf.nl/projecten",
       lastModified: new Date(),
       priority: 0.8,
     },
     {
-      url: "https://arix-schilderbedrijf.nl/contact",
+      url: "https://arix-schildersbedrijf.nl/contact",
       lastModified: new Date(),
       priority: 0.9,
     },
     {
-      url: "https://arix-schilderbedrijf.nl/diensten/schilderwerk",
+      url: "https://arix-schildersbedrijf.nl/diensten/schilderwerk",
       lastModified: new Date(),
       priority: 0.8,
     },
     {
-      url: "https://arix-schilderbedrijf.nl/diensten/spuitwerk",
+      url: "https://arix-schildersbedrijf.nl/diensten/spuitwerk",
       lastModified: new Date(),
       priority: 0.8,
     },
     {
-      url: "https://arix-schilderbedrijf.nl/diensten/behangen",
+      url: "https://arix-schildersbedrijf.nl/diensten/behangen",
       lastModified: new Date(),
       priority: 0.8,
     },
     {
-      url: "https://arix-schilderbedrijf.nl/diensten/houtrot",
+      url: "https://arix-schildersbedrijf.nl/diensten/houtrot",
       lastModified: new Date(),
       priority: 0.8,
     },
     {
-      url: "https://arix-schilderbedrijf.nl/diensten/sausklaar-stucwerk",
+      url: "https://arix-schildersbedrijf.nl/diensten/sausklaar-stucwerk",
       lastModified: new Date(),
       priority: 0.8,
     },

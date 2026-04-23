@@ -89,7 +89,7 @@ export default function ContactForm() {
             </span>
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-text tracking-tight font-[family-name:var(--font-serif)]">
               Neem contact op met{" "}
-              <span className="text-gold italic">Arix-schilderbedrijf</span>
+              <span className="text-gold italic">ARIX-SCHILDERSBEDRIJF</span>
             </h1>
           </motion.div>
         </div>
@@ -135,7 +135,7 @@ export default function ContactForm() {
                 </a>
 
                 <a
-                  href="https://maps.google.com/?q=De+soel+21,+4011+GR+Zoelen"
+                  href="https://maps.google.com/?q=Tusolaan+25,+3772WP+Barneveld"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 sm:p-5 bg-bg-warm rounded-xl hover:bg-gold/5 transition-colors group"
@@ -148,13 +148,13 @@ export default function ContactForm() {
                       Adres
                     </p>
                     <p className="font-bold text-text text-sm sm:text-base">
-                      De soel 21, 4011 GR Zoelen
+                      Tusolaan 25, 3772WP Barneveld
                     </p>
                   </div>
                 </a>
 
                 <a
-                  href="mailto:info@arix-schilderbedrijf.nl"
+                  href="mailto:info@arix-schildersbedrijf.nl"
                   className="flex items-center gap-4 p-4 sm:p-5 bg-bg-warm rounded-xl hover:bg-gold/5 transition-colors group"
                 >
                   <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-gold/10 flex items-center justify-center shrink-0 group-hover:bg-gold/20 transition-colors">
@@ -165,7 +165,7 @@ export default function ContactForm() {
                       E-mail
                     </p>
                     <p className="font-bold text-text text-sm sm:text-base">
-                      info@arix-schilderbedrijf.nl
+                      info@arix-schildersbedrijf.nl
                     </p>
                   </div>
                 </a>
@@ -353,7 +353,7 @@ export default function ContactForm() {
           <MapEmbed height="h-80 sm:h-[28rem] lg:h-[32rem]" rounded="rounded-2xl" shadow={true} />
           <div className="mt-6 text-center">
             <a
-              href="https://maps.google.com/?q=De+soel+21,+4011+GR+Zoelen"
+              href="https://maps.google.com/?q=Tusolaan+25,+3772WP+Barneveld"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-gold hover:text-gold-dark font-semibold text-sm transition-colors"

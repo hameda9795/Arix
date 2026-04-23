@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import ServicePageLayout from "@/components/ServicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Schilderwerk Binnen & Buiten | Arix Schilderbedrijf",
+  title: "Schilderwerk Binnen & Buiten | ARIX-SCHILDERSBEDRIJF",
   description:
-    "Professioneel binnen- en buitenschilderwerk voor woningen en bedrijfspanden in Barneveld. Arix Schilderbedrijf levert hoogwaardige kwaliteit met meer dan 10 jaar ervaring.",
+    "Professioneel binnen- en buitenschilderwerk voor woningen en bedrijfspanden in Barneveld. ARIX-SCHILDERSBEDRIJF levert hoogwaardige kwaliteit met meer dan 10 jaar ervaring.",
   openGraph: {
     type: "website",
     url: "/diensten/schilderwerk",
-    title: "Schilderwerk Binnen & Buiten | Arix Schilderbedrijf",
+    title: "Schilderwerk Binnen & Buiten | ARIX-SCHILDERSBEDRIJF",
     description:
       "Professioneel binnen- en buitenschilderwerk voor woningen en bedrijfspanden in Barneveld.",
     images: [
@@ -16,13 +16,13 @@ export const metadata: Metadata = {
         url: "/images/hero-bg.webp",
         width: 1200,
         height: 630,
-        alt: "Arix Schilderbedrijf",
+        alt: "ARIX-SCHILDERSBEDRIJF",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Schilderwerk Binnen & Buiten | Arix Schilderbedrijf",
+    title: "Schilderwerk Binnen & Buiten | ARIX-SCHILDERSBEDRIJF",
     description:
       "Professioneel binnen- en buitenschilderwerk voor woningen en bedrijfspanden in Barneveld.",
     images: ["/images/hero-bg.webp"],
