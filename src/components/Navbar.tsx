@@ -1,10 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, ChevronDown, Paintbrush, SprayCan, Wallpaper, TreePine, Sparkles } from "lucide-react";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -13,10 +13,23 @@ const navLinks = [
   { href: "/contact", label: "Contact" },
 ];
 
+const dienstenLinks = [
+  { href: "/diensten/schilderwerk", label: "Schilderwerk", icon: Paintbrush },
+  { href: "/diensten/spuitwerk", label: "Spuitwerk", icon: SprayCan },
+  { href: "/diensten/behangen", label: "Behangen", icon: Wallpaper },
+  { href: "/diensten/houtrot", label: "Houtrot Reparatie", icon: TreePine },
+  { href: "/diensten/sausklaar-stucwerk", label: "Sausklaar Stucwerk", icon: Sparkles },
+];
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [dienstenOpen, setDienstenOpen] = useState(false);
+  const [mobileDienstenOpen, setMobileDienstenOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
+
+  const isDienstenActive = pathname.startsWith("/diensten");
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -26,7 +39,19 @@ export default function Navbar() {
 
   useEffect(() => {
     setIsOpen(false);
+    setMobileDienstenOpen(false);
   }, [pathname]);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setDienstenOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
     <header
@@ -40,13 +65,11 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-24 sm:h-28">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 z-50">
-            {/* Desktop logo */}
             <img
               src={scrolled ? "/images/logo.png" : "/images/logo-white.png"}
               alt="ARIX-SCHILDERSBEDRIJF"
               className="hidden sm:block h-20 lg:h-24 transition-all duration-300"
             />
-            {/* Mobile logo */}
             <img
               src={scrolled ? "/images/logo.png" : "/images/logo-white.png"}
               alt="ARIX-SCHILDERSBEDRIJF"
@@ -55,7 +78,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-6 lg:gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -79,6 +102,78 @@ export default function Navbar() {
                 )}
               </Link>
             ))}
+
+            {/* Diensten Dropdown */}
+            <div className="relative" ref={dropdownRef}>
+              <button
+                onClick={() => setDienstenOpen(!dienstenOpen)}
+                onMouseEnter={() => setDienstenOpen(true)}
+                className={`relative flex items-center gap-1 text-sm font-semibold transition-colors py-1 ${
+                  isDienstenActive
+                    ? scrolled
+                      ? "text-gold"
+                      : "text-gold-light"
+                    : scrolled
+                    ? "text-text hover:text-gold"
+                    : "text-white/80 hover:text-white"
+                }`}
+              >
+                Diensten
+                <ChevronDown
+                  className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                    dienstenOpen ? "rotate-180" : ""
+                  }`}
+                />
+                {isDienstenActive && (
+                  <motion.span
+                    layoutId="navbar-underline"
+                    className="absolute -bottom-0.5 left-0 right-0 h-0.5 bg-gold"
+                  />
+                )}
+              </button>
+
+              <AnimatePresence>
+                {dienstenOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 8, scale: 0.97 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 8, scale: 0.97 }}
+                    transition={{ duration: 0.2 }}
+                    onMouseLeave={() => setDienstenOpen(false)}
+                    className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-64 bg-white rounded-2xl shadow-xl shadow-black/10 border border-gold/10 overflow-hidden py-2"
+                  >
+                    <Link
+                      href="/diensten"
+                      className={`block px-5 py-2.5 text-sm font-semibold transition-colors ${
+                        pathname === "/diensten"
+                          ? "text-gold bg-gold/5"
+                          : "text-text hover:text-gold hover:bg-gold/5"
+                      }`}
+                    >
+                      Alle diensten
+                    </Link>
+                    <div className="mx-4 h-px bg-gold/10" />
+                    {dienstenLinks.map((service) => {
+                      const Icon = service.icon;
+                      return (
+                        <Link
+                          key={service.href}
+                          href={service.href}
+                          className={`flex items-center gap-3 px-5 py-2.5 text-sm transition-colors ${
+                            pathname === service.href
+                              ? "text-gold bg-gold/5 font-semibold"
+                              : "text-text-light hover:text-gold hover:bg-gold/5"
+                          }`}
+                        >
+                          <Icon className="w-4 h-4 shrink-0" />
+                          {service.label}
+                        </Link>
+                      );
+                    })}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
           </nav>
 
           {/* CTA Button */}
@@ -123,7 +218,7 @@ export default function Navbar() {
             transition={{ duration: 0.2 }}
             className="md:hidden absolute top-0 left-0 right-0 bg-white shadow-xl border-b border-gold/10"
           >
-            <div className="px-4 pt-24 pb-8 space-y-2">
+            <div className="px-4 pt-24 pb-8 space-y-1">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
@@ -137,6 +232,67 @@ export default function Navbar() {
                   {link.label}
                 </Link>
               ))}
+
+              {/* Mobile Diensten */}
+              <div className="pt-1">
+                <button
+                  onClick={() => setMobileDienstenOpen(!mobileDienstenOpen)}
+                  className={`w-full flex items-center justify-between px-4 py-3 rounded-lg text-base font-semibold transition-colors ${
+                    isDienstenActive
+                      ? "bg-gold/10 text-gold"
+                      : "text-text hover:bg-gray-50"
+                  }`}
+                >
+                  <span>Diensten</span>
+                  <ChevronDown
+                    className={`w-4 h-4 transition-transform duration-200 ${
+                      mobileDienstenOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+                <AnimatePresence>
+                  {mobileDienstenOpen && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.2 }}
+                      className="overflow-hidden"
+                    >
+                      <div className="pl-4 space-y-1 mt-1">
+                        <Link
+                          href="/diensten"
+                          className={`block px-4 py-2.5 rounded-lg text-sm font-semibold transition-colors ${
+                            pathname === "/diensten"
+                              ? "text-gold bg-gold/5"
+                              : "text-text-light hover:bg-gray-50"
+                          }`}
+                        >
+                          Alle diensten
+                        </Link>
+                        {dienstenLinks.map((service) => {
+                          const Icon = service.icon;
+                          return (
+                            <Link
+                              key={service.href}
+                              href={service.href}
+                              className={`flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm transition-colors ${
+                                pathname === service.href
+                                  ? "text-gold bg-gold/5 font-semibold"
+                                  : "text-text-light hover:bg-gray-50"
+                              }`}
+                            >
+                              <Icon className="w-4 h-4" />
+                              {service.label}
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+
               <div className="pt-4 border-t border-gray-100 space-y-3">
                 <a
                   href="tel:+31645459815"

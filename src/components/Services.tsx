@@ -20,7 +20,7 @@ const services = [
     desc: "Binnen- en buitenschilderwerk voor woningen en bedrijfspanden.",
     href: "/diensten/schilderwerk",
     icon: Paintbrush,
-    image: "/images/project1.jpg",
+    image: "/images/service-hero-painter.jpeg",
   },
   {
     num: "02",
@@ -28,7 +28,7 @@ const services = [
     desc: "Latex spuitwerk voor een egaal resultaat zonder strepen.",
     href: "/diensten/spuitwerk",
     icon: SprayCan,
-    image: "/images/project5.jpg",
+    image: "/images/service-project-1.jpeg",
   },
   {
     num: "03",
@@ -44,7 +44,7 @@ const services = [
     desc: "Specialist in het behandelen en repareren van houtrot.",
     href: "/diensten/houtrot",
     icon: TreePine,
-    image: "/images/project2.jpg",
+    image: "/images/service-project-2.jpeg",
   },
   {
     num: "05",

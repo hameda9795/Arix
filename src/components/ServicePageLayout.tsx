@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
@@ -25,10 +26,13 @@ export default function ServicePageLayout({
       <section className="relative min-h-[50vh] sm:min-h-[55vh] flex items-end pb-12 sm:pb-20 pt-32 sm:pt-40 overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
-          <img
+          <Image
             src={image}
             alt={title}
-            className="w-full h-full object-cover"
+            fill
+            className="object-cover"
+            priority
+            sizes="100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30" />
         </div>
@@ -51,19 +55,31 @@ export default function ServicePageLayout({
           </motion.div>
         </div>
 
-        {/* Paint drip bottom */}
-        <div className="absolute bottom-0 left-0 right-0 h-10 sm:h-12 bg-white paint-drip-bottom" />
+        {/* Bottom curve */}
+        <div className="absolute bottom-0 left-0 right-0">
+          <svg
+            viewBox="0 0 1440 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-full h-8 sm:h-12"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M0 48h1440V12c-240 24-480 36-720 36S240 36 0 12v36z"
+              fill="white"
+            />
+          </svg>
+        </div>
       </section>
 
       {/* Content */}
       <section className="py-12 sm:py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="prose prose-sm sm:prose-base max-w-none text-text-light leading-relaxed"
           >
             {description}
           </motion.div>
