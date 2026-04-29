@@ -26,7 +26,7 @@ export default function Hero() {
       <div className="absolute inset-0 overflow-hidden">
         <motion.div className="absolute inset-[-10%] w-[120%] h-[120%]" style={{ y: bgY }}>
           <Image
-            src="/images/hero-new.png"
+            src="/images/hero-bg.webp"
             alt="Schilderwerk achtergrond"
             fill
             className="object-cover"
@@ -73,17 +73,38 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-          className="text-base sm:text-lg md:text-xl text-white/70 max-w-xl mx-auto mb-8 sm:mb-10 leading-relaxed"
+          className="text-base sm:text-lg md:text-xl text-white/70 max-w-xl mx-auto mb-6 sm:mb-8 leading-relaxed"
         >
           Arix-schildersbedrijf volbrengt al uw schilderwerken met succes. Meer
           dan tien jaar ervaring in schilderwerk, spuitwerk en behangen in
           Barneveld.
         </motion.p>
 
+        {/* OnderhoudNL Logo - trust badge */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+          className="flex flex-col items-center mb-6 sm:mb-8"
+        >
+          <span className="text-[10px] sm:text-xs text-white/50 uppercase tracking-widest mb-2">
+            Erkend lid van
+          </span>
+          <div className="relative w-28 h-12 sm:w-36 sm:h-14 md:w-40 md:h-16 bg-white rounded-md px-3 py-1 flex items-center justify-center shadow-lg">
+            <Image
+              src="/images/OnderhoudNL_Standaard_RGB_zonder witruimte.png"
+              alt="OnderhoudNL erkend bedrijf"
+              fill
+              className="object-contain p-1"
+              sizes="(max-width: 640px) 112px, (max-width: 768px) 144px, 160px"
+            />
+          </div>
+        </motion.div>
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.45, ease: "easeOut" }}
+          transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
           className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4"
         >
           <Link
