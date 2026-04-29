@@ -26,7 +26,7 @@ export default function Hero() {
       <div className="absolute inset-0 overflow-hidden">
         <motion.div className="absolute inset-[-10%] w-[120%] h-[120%]" style={{ y: bgY }}>
           <Image
-            src="/images/hero-bg.webp"
+            src="/images/hero-new.png"
             alt="Schilderwerk achtergrond"
             fill
             className="object-cover"

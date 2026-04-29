@@ -13,7 +13,7 @@ export const metadata: Metadata = {
       "Bekijk de meest recente projecten van ARIX-SCHILDERSBEDRIJF. Laat u inspireren door ons portfolio van schilderwerk, spuitwerk, behangen en renovaties.",
     images: [
       {
-        url: "/images/hero-bg.webp",
+        url: "/images/hero-new.png",
         width: 1200,
         height: 630,
         alt: "ARIX-SCHILDERSBEDRIJF",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     title: "Projecten | Schilderwerk Portfolio",
     description:
       "Bekijk de meest recente projecten van ARIX-SCHILDERSBEDRIJF. Laat u inspireren door ons portfolio van schilderwerk, spuitwerk, behangen en renovaties.",
-    images: ["/images/hero-bg.webp"],
+    images: ["/images/hero-new.png"],
   },
   alternates: {
     canonical: "/projecten",

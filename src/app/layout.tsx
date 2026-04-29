@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/hero-bg.webp",
+        url: "/images/hero-new.png",
         width: 1200,
         height: 630,
         alt: "ARIX-SCHILDERSBEDRIJF",
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     },
     description:
       "Arix-schildersbedrijf volbrengt al uw schilderwerken met succes. Meer dan tien jaar ervaring in schilderwerk, spuitwerk en behangen in Barneveld, Tiel en Arnhem.",
-    images: ["/images/hero-bg.webp"],
+    images: ["/images/hero-new.png"],
   },
   robots: {
     index: true,

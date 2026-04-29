@@ -13,7 +13,7 @@ export const metadata: Metadata = {
       "Bekijk alle diensten van ARIX-SCHILDERSBEDRIJF: schilderwerk, spuitwerk, behangen, houtrot reparatie en sauzklaar stucwerk.",
     images: [
       {
-        url: "/images/hero-bg.webp",
+        url: "/images/hero-new.png",
         width: 1200,
         height: 630,
         alt: "ARIX-SCHILDERSBEDRIJF",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     title: "Diensten | ARIX-SCHILDERSBEDRIJF",
     description:
       "Bekijk alle diensten van ARIX-SCHILDERSBEDRIJF: schilderwerk, spuitwerk, behangen, houtrot reparatie en sauzklaar stucwerk.",
-    images: ["/images/hero-bg.webp"],
+    images: ["/images/hero-new.png"],
   },
   alternates: {
     canonical: "/diensten",

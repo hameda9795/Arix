@@ -23,7 +23,7 @@ export const metadata: Metadata = {
       "ARIX-SCHILDERSBEDRIJF heeft meer dan 10 jaar ervaring in professioneel schilderwerk, spuitwerk, behangen, houtrot reparatie en stucwerk. Wij bedienen Barneveld, Tiel, Arnhem en omgeving.",
     images: [
       {
-        url: "/images/hero-bg.webp",
+        url: "/images/hero-new.png",
         width: 1200,
         height: 630,
         alt: "ARIX-SCHILDERSBEDRIJF",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     title: "Professionele Schilders in Barneveld | ARIX-SCHILDERSBEDRIJF",
     description:
       "ARIX-SCHILDERSBEDRIJF heeft meer dan 10 jaar ervaring in professioneel schilderwerk, spuitwerk, behangen, houtrot reparatie en stucwerk. Wij bedienen Barneveld, Tiel, Arnhem en omgeving.",
-    images: ["/images/hero-bg.webp"],
+    images: ["/images/hero-new.png"],
   },
   alternates: {
     canonical: "/",
@@ -46,7 +46,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "ARIX-SCHILDERSBEDRIJF",
-  image: "https://arix-schildersbedrijf.nl/images/hero-bg.webp",
+  image: "https://arix-schildersbedrijf.nl/images/hero-new.png",
   url: "https://arix-schildersbedrijf.nl",
   telephone: "+31645459815",
   email: "info@arix-schildersbedrijf.nl",

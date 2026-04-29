@@ -13,7 +13,7 @@ export const metadata: Metadata = {
       "Neem contact op met ARIX-SCHILDERSBEDRIJF voor een vrijblijvende offerte. Bel +31 6 45459815 of mail naar info@arix-schildersbedrijf.nl.",
     images: [
       {
-        url: "/images/hero-bg.webp",
+        url: "/images/hero-new.png",
         width: 1200,
         height: 630,
         alt: "ARIX-SCHILDERSBEDRIJF",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     title: "Contact | Vrijblijvende Offerte Aanvragen",
     description:
       "Neem contact op met ARIX-SCHILDERSBEDRIJF voor een vrijblijvende offerte. Bel +31 6 45459815 of mail naar info@arix-schildersbedrijf.nl.",
-    images: ["/images/hero-bg.webp"],
+    images: ["/images/hero-new.png"],
   },
   alternates: {
     canonical: "/contact",
@@ -42,7 +42,7 @@ const contactPageSchema = {
   mainEntity: {
     "@type": "LocalBusiness",
     name: "ARIX-SCHILDERSBEDRIJF",
-    image: "https://arix-schildersbedrijf.nl/images/hero-bg.webp",
+    image: "https://arix-schildersbedrijf.nl/images/hero-new.png",
     url: "https://arix-schildersbedrijf.nl",
     telephone: "+31645459815",
     email: "info@arix-schildersbedrijf.nl",
