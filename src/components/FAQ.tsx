@@ -27,7 +27,7 @@ const faqs = [
   },
   {
     q: "In welke regio's zijn jullie actief?",
-    a: "Wij zijn voornamelijk actief in Barneveld, Tiel, Arnhem en omgeving. Staat uw regio er niet bij? Neem gerust contact op, dan kijken we samen naar de mogelijkheden.",
+    a: "Wij zijn voornamelijk actief in Barneveld, Amersfoort, Utrecht, Veenendaal, Ede en omgeving. Staat uw regio er niet bij? Neem gerust contact op, dan kijken we samen naar de mogelijkheden.",
   },
 ];
 

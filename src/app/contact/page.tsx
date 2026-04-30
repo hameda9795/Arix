@@ -4,7 +4,7 @@ import ContactForm from "@/components/ContactForm";
 export const metadata: Metadata = {
   title: "Contact | Vrijblijvende Offerte Aanvragen",
   description:
-    "Neem contact op met ARIX-SCHILDERSBEDRIJF voor een vrijblijvende offerte. Bel +31 6 45459815 of mail naar info@arix-schildersbedrijf.nl. Wij zijn gevestigd in Barneveld en actief in Barneveld, Tiel en Arnhem.",
+    "Neem contact op met ARIX-SCHILDERSBEDRIJF voor een vrijblijvende offerte. Bel +31 6 45459815 of mail naar info@arix-schildersbedrijf.nl. Wij zijn gevestigd in Barneveld en actief in Barneveld, Amersfoort, Utrecht, Veenendaal, Ede en omgeving.",
   openGraph: {
     type: "website",
     url: "/contact",
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
       "Neem contact op met ARIX-SCHILDERSBEDRIJF voor een vrijblijvende offerte. Bel +31 6 45459815 of mail naar info@arix-schildersbedrijf.nl.",
     images: [
       {
-        url: "/images/hero-new.png",
+        url: "/images/hero-bg.webp",
         width: 1200,
         height: 630,
         alt: "ARIX-SCHILDERSBEDRIJF",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     title: "Contact | Vrijblijvende Offerte Aanvragen",
     description:
       "Neem contact op met ARIX-SCHILDERSBEDRIJF voor een vrijblijvende offerte. Bel +31 6 45459815 of mail naar info@arix-schildersbedrijf.nl.",
-    images: ["/images/hero-new.png"],
+    images: ["/images/hero-bg.webp"],
   },
   alternates: {
     canonical: "/contact",
@@ -42,7 +42,7 @@ const contactPageSchema = {
   mainEntity: {
     "@type": "LocalBusiness",
     name: "ARIX-SCHILDERSBEDRIJF",
-    image: "https://arix-schildersbedrijf.nl/images/hero-new.png",
+    image: "https://arix-schildersbedrijf.nl/images/hero-bg.webp",
     url: "https://arix-schildersbedrijf.nl",
     telephone: "+31645459815",
     email: "info@arix-schildersbedrijf.nl",
@@ -68,7 +68,7 @@ const contactPageSchema = {
         closes: "17:00",
       },
     ],
-    areaServed: "Barneveld, Tiel, Arnhem",
+    areaServed: "Barneveld, Amersfoort, Utrecht, Veenendaal, Ede",
   },
 };
 

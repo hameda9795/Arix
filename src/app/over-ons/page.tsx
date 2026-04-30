@@ -4,16 +4,16 @@ import OverOnsContent from "@/components/OverOnsContent";
 export const metadata: Metadata = {
   title: "Over Ons | ARIX-SCHILDERSBEDRIJF in Barneveld",
   description:
-    "Leer meer over ARIX-SCHILDERSBEDRIJF. Al meer dan 10 jaar dé professionele schilder in Barneveld en omgeving voor schilderwerk, spuitwerk, behangen en houtrot reparatie.",
+    "Leer meer over ARIX-SCHILDERSBEDRIJF. Al meer dan 10 jaar dé professionele schilder in Barneveld, Amersfoort, Utrecht, Veenendaal, Ede en omgeving voor schilderwerk, spuitwerk, behangen en houtrot reparatie.",
   openGraph: {
     type: "website",
     url: "/over-ons",
     title: "Over Ons | ARIX-SCHILDERSBEDRIJF in Barneveld",
     description:
-      "Leer meer over ARIX-SCHILDERSBEDRIJF. Al meer dan 10 jaar dé professionele schilder in Barneveld en omgeving.",
+      "Leer meer over ARIX-SCHILDERSBEDRIJF. Al meer dan 10 jaar dé professionele schilder in Barneveld, Amersfoort, Utrecht, Veenendaal, Ede en omgeving.",
     images: [
       {
-        url: "/images/hero-new.png",
+        url: "/images/hero-bg.webp",
         width: 1200,
         height: 630,
         alt: "ARIX-SCHILDERSBEDRIJF",
@@ -24,8 +24,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Over Ons | ARIX-SCHILDERSBEDRIJF in Barneveld",
     description:
-      "Leer meer over ARIX-SCHILDERSBEDRIJF. Al meer dan 10 jaar dé professionele schilder in Barneveld en omgeving.",
-    images: ["/images/hero-new.png"],
+      "Leer meer over ARIX-SCHILDERSBEDRIJF. Al meer dan 10 jaar dé professionele schilder in Barneveld, Amersfoort, Utrecht, Veenendaal, Ede en omgeving.",
+    images: ["/images/hero-bg.webp"],
   },
   alternates: {
     canonical: "/over-ons",

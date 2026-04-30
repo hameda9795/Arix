@@ -14,16 +14,16 @@ import CTA from "@/components/CTA";
 export const metadata: Metadata = {
   title: "Professionele Schilders in Barneveld | ARIX-SCHILDERSBEDRIJF",
   description:
-    "ARIX-SCHILDERSBEDRIJF heeft meer dan 10 jaar ervaring in professioneel schilderwerk, spuitwerk, behangen, houtrot reparatie en stucwerk. Wij bedienen Barneveld, Tiel, Arnhem en omgeving. Vraag vandaag nog een vrijblijvende offerte aan.",
+    "ARIX-SCHILDERSBEDRIJF heeft meer dan 10 jaar ervaring in professioneel schilderwerk, spuitwerk, behangen, houtrot reparatie en stucwerk. Wij bedienen Barneveld, Amersfoort, Utrecht, Veenendaal, Ede en omgeving. Vraag vandaag nog een vrijblijvende offerte aan.",
   openGraph: {
     type: "website",
     url: "/",
     title: "Professionele Schilders in Barneveld | ARIX-SCHILDERSBEDRIJF",
     description:
-      "ARIX-SCHILDERSBEDRIJF heeft meer dan 10 jaar ervaring in professioneel schilderwerk, spuitwerk, behangen, houtrot reparatie en stucwerk. Wij bedienen Barneveld, Tiel, Arnhem en omgeving.",
+      "ARIX-SCHILDERSBEDRIJF heeft meer dan 10 jaar ervaring in professioneel schilderwerk, spuitwerk, behangen, houtrot reparatie en stucwerk. Wij bedienen Barneveld, Amersfoort, Utrecht, Veenendaal, Ede en omgeving.",
     images: [
       {
-        url: "/images/hero-new.png",
+        url: "/images/hero-bg.webp",
         width: 1200,
         height: 630,
         alt: "ARIX-SCHILDERSBEDRIJF",
@@ -34,8 +34,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Professionele Schilders in Barneveld | ARIX-SCHILDERSBEDRIJF",
     description:
-      "ARIX-SCHILDERSBEDRIJF heeft meer dan 10 jaar ervaring in professioneel schilderwerk, spuitwerk, behangen, houtrot reparatie en stucwerk. Wij bedienen Barneveld, Tiel, Arnhem en omgeving.",
-    images: ["/images/hero-new.png"],
+      "ARIX-SCHILDERSBEDRIJF heeft meer dan 10 jaar ervaring in professioneel schilderwerk, spuitwerk, behangen, houtrot reparatie en stucwerk. Wij bedienen Barneveld, Amersfoort, Utrecht, Veenendaal, Ede en omgeving.",
+    images: ["/images/hero-bg.webp"],
   },
   alternates: {
     canonical: "/",
@@ -46,7 +46,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "ARIX-SCHILDERSBEDRIJF",
-  image: "https://arix-schildersbedrijf.nl/images/hero-new.png",
+  image: "https://arix-schildersbedrijf.nl/images/hero-bg.webp",
   url: "https://arix-schildersbedrijf.nl",
   telephone: "+31645459815",
   email: "info@arix-schildersbedrijf.nl",
@@ -72,7 +72,7 @@ const localBusinessSchema = {
       closes: "17:00",
     },
   ],
-  areaServed: "Barneveld, Tiel, Arnhem",
+  areaServed: "Barneveld, Amersfoort, Utrecht, Veenendaal, Ede",
 };
 
 export default function Home() {

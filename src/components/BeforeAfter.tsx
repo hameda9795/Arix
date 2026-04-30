@@ -67,7 +67,7 @@ export default function BeforeAfter() {
         >
           <div
             ref={containerRef}
-            className="relative aspect-[16/10] rounded-2xl overflow-hidden cursor-ew-resize select-none shadow-2xl shadow-black/10"
+            className="relative aspect-[16/10] rounded-2xl overflow-hidden cursor-ew-resize select-none shadow-2xl shadow-black/10 bg-neutral-900"
             onMouseMove={handleMouseMove}
             onMouseUp={handleMouseUp}
             onMouseLeave={handleMouseUp}
@@ -78,7 +78,7 @@ export default function BeforeAfter() {
             <img
               src="/images/project5.jpg"
               alt="Na"
-              className="absolute inset-0 w-full h-full object-cover"
+              className="absolute inset-0 w-full h-full object-contain"
               draggable={false}
             />
 
@@ -90,7 +90,7 @@ export default function BeforeAfter() {
               <img
                 src="/images/project1.jpg"
                 alt="Voor"
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-contain"
                 draggable={false}
               />
               <div className="absolute inset-0 bg-black/10" />

@@ -4,7 +4,7 @@ import DienstenContent from "@/components/DienstenContent";
 export const metadata: Metadata = {
   title: "Diensten | ARIX-SCHILDERSBEDRIJF",
   description:
-    "Bekijk alle diensten van ARIX-SCHILDERSBEDRIJF: schilderwerk, spuitwerk, behangen, houtrot reparatie en sauzklaar stucwerk. Professioneel vakmanschap in Barneveld en omgeving.",
+    "Bekijk alle diensten van ARIX-SCHILDERSBEDRIJF: schilderwerk, spuitwerk, behangen, houtrot reparatie en sauzklaar stucwerk. Professioneel vakmanschap in Barneveld, Amersfoort, Utrecht, Veenendaal, Ede en omgeving.",
   openGraph: {
     type: "website",
     url: "/diensten",
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
       "Bekijk alle diensten van ARIX-SCHILDERSBEDRIJF: schilderwerk, spuitwerk, behangen, houtrot reparatie en sauzklaar stucwerk.",
     images: [
       {
-        url: "/images/hero-new.png",
+        url: "/images/hero-bg.webp",
         width: 1200,
         height: 630,
         alt: "ARIX-SCHILDERSBEDRIJF",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     title: "Diensten | ARIX-SCHILDERSBEDRIJF",
     description:
       "Bekijk alle diensten van ARIX-SCHILDERSBEDRIJF: schilderwerk, spuitwerk, behangen, houtrot reparatie en sauzklaar stucwerk.",
-    images: ["/images/hero-new.png"],
+    images: ["/images/hero-bg.webp"],
   },
   alternates: {
     canonical: "/diensten",

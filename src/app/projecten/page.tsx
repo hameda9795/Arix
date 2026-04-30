@@ -4,7 +4,7 @@ import ProjectenContent from "@/components/ProjectenContent";
 export const metadata: Metadata = {
   title: "Projecten | Schilderwerk Portfolio",
   description:
-    "Bekijk de meest recente projecten van ARIX-SCHILDERSBEDRIJF. Laat u inspireren door ons portfolio van schilderwerk, spuitwerk, behangen en renovaties in Barneveld en omgeving.",
+    "Bekijk de meest recente projecten van ARIX-SCHILDERSBEDRIJF. Laat u inspireren door ons portfolio van schilderwerk, spuitwerk, behangen en renovaties in Barneveld, Amersfoort, Utrecht, Veenendaal, Ede en omgeving.",
   openGraph: {
     type: "website",
     url: "/projecten",
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
       "Bekijk de meest recente projecten van ARIX-SCHILDERSBEDRIJF. Laat u inspireren door ons portfolio van schilderwerk, spuitwerk, behangen en renovaties.",
     images: [
       {
-        url: "/images/hero-new.png",
+        url: "/images/hero-bg.webp",
         width: 1200,
         height: 630,
         alt: "ARIX-SCHILDERSBEDRIJF",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     title: "Projecten | Schilderwerk Portfolio",
     description:
       "Bekijk de meest recente projecten van ARIX-SCHILDERSBEDRIJF. Laat u inspireren door ons portfolio van schilderwerk, spuitwerk, behangen en renovaties.",
-    images: ["/images/hero-new.png"],
+    images: ["/images/hero-bg.webp"],
   },
   alternates: {
     canonical: "/projecten",

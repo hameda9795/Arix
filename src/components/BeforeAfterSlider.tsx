@@ -77,7 +77,7 @@ export default function BeforeAfterSlider({
       )}
       <div
         ref={containerRef}
-        className="relative w-full overflow-hidden rounded-xl sm:rounded-2xl cursor-ew-resize select-none shadow-lg shadow-black/5 group"
+        className="relative w-full overflow-hidden rounded-xl sm:rounded-2xl cursor-ew-resize select-none shadow-lg shadow-black/5 group bg-neutral-900"
         style={{ aspectRatio }}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
@@ -90,7 +90,7 @@ export default function BeforeAfterSlider({
         <img
           src={afterSrc}
           alt={afterAlt}
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-contain"
           draggable={false}
           loading="lazy"
         />
@@ -103,7 +103,7 @@ export default function BeforeAfterSlider({
           <img
             src={beforeSrc}
             alt={beforeAlt}
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-contain"
             draggable={false}
             loading="lazy"
           />

@@ -16,7 +16,7 @@ const binnenProjects = [
     id: "wanden-plafonds",
     title: "Wanden en plafonds sauswerk",
     before: "/projecten/binnen/Wanden en plafonds sauswerk-voor.jpeg",
-    after: "/projecten/binnen/Wanden en plafonds sauswerk-na.jpeg",
+    after: "/projecten/binnen/Wanden en plafonds sauswerk-na.png",
   },
 ];
 

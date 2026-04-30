@@ -18,7 +18,7 @@ export default function ServicePageLayout({
   subtitle,
   description,
   features,
-  image = "/images/hero-new.png",
+  image = "/images/hero-bg.webp",
 }: ServicePageLayoutProps) {
   return (
     <>

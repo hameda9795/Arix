@@ -34,7 +34,7 @@ export default function Footer() {
               />
             </Link>
             <p className="text-white/50 text-sm leading-relaxed max-w-xs">
-              Professionele schilders in Barneveld en omgeving. Kwaliteit en
+              Professionele schilders in Barneveld, Amersfoort, Utrecht, Veenendaal, Ede en omgeving. Kwaliteit en
               vakmanschap sinds meer dan 10 jaar.
             </p>
           </div>

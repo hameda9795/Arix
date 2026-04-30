@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     default: "ARIX-SCHILDERSBEDRIJF | Professionele Schilders in Barneveld",
   },
   description:
-    "ARIX-SCHILDERSBEDRIJF volbrengt al uw schilderwerken met succes. Meer dan tien jaar ervaring in schilderwerk, spuitwerk en behangen in Barneveld, Tiel en Arnhem.",
+    "ARIX-SCHILDERSBEDRIJF volbrengt al uw schilderwerken met succes. Meer dan tien jaar ervaring in schilderwerk, spuitwerk en behangen in Barneveld, Amersfoort, Utrecht, Veenendaal en Ede.",
   keywords: [
     "schilder",
     "schilderwerk",
@@ -45,14 +45,14 @@ export const metadata: Metadata = {
       default: "ARIX-SCHILDERSBEDRIJF | Professionele Schilders in Barneveld",
     },
     description:
-      "Arix-schildersbedrijf volbrengt al uw schilderwerken met succes. Meer dan tien jaar ervaring in schilderwerk, spuitwerk en behangen in Barneveld, Tiel en Arnhem.",
+      "Arix-schildersbedrijf volbrengt al uw schilderwerken met succes. Meer dan tien jaar ervaring in schilderwerk, spuitwerk en behangen in Barneveld, Amersfoort, Utrecht, Veenendaal en Ede.",
     url: "https://arix-schildersbedrijf.nl",
     siteName: "ARIX-SCHILDERSBEDRIJF",
     locale: "nl_NL",
     type: "website",
     images: [
       {
-        url: "/images/hero-new.png",
+        url: "/images/hero-bg.webp",
         width: 1200,
         height: 630,
         alt: "ARIX-SCHILDERSBEDRIJF",
@@ -66,8 +66,8 @@ export const metadata: Metadata = {
       default: "ARIX-SCHILDERSBEDRIJF | Professionele Schilders in Barneveld",
     },
     description:
-      "Arix-schildersbedrijf volbrengt al uw schilderwerken met succes. Meer dan tien jaar ervaring in schilderwerk, spuitwerk en behangen in Barneveld, Tiel en Arnhem.",
-    images: ["/images/hero-new.png"],
+      "Arix-schildersbedrijf volbrengt al uw schilderwerken met succes. Meer dan tien jaar ervaring in schilderwerk, spuitwerk en behangen in Barneveld, Amersfoort, Utrecht, Veenendaal en Ede.",
+    images: ["/images/hero-bg.webp"],
   },
   robots: {
     index: true,
