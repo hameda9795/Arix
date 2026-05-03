@@ -90,7 +90,7 @@ export default function Hero() {
           <span className="text-[10px] sm:text-xs text-white/50 uppercase tracking-widest mb-2">
             Erkend lid van
           </span>
-          <div className="relative w-28 h-12 sm:w-36 sm:h-14 md:w-40 md:h-16 bg-white rounded-md px-3 py-1 flex items-center justify-center shadow-lg">
+          <div className="relative w-28 h-12 sm:w-36 sm:h-14 md:w-40 md:h-16 flex items-center justify-center">
             <Image
               src="/images/OnderhoudNL_Standaard_RGB_zonder witruimte.png"
               alt="OnderhoudNL erkend bedrijf"
