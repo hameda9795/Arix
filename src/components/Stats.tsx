@@ -2,13 +2,13 @@
 
 import { useRef, useEffect, useState } from "react";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
-import { Calendar, Award, Users, Paintbrush } from "lucide-react";
+import { Calendar, Award, CheckCircle, ThumbsUp } from "lucide-react";
 
 const stats = [
   { icon: Calendar, value: 10, suffix: "+", label: "Jaar ervaring" },
   { icon: Award, value: 3, suffix: " jaar", label: "Garantie op werk" },
-  { icon: Users, value: 500, suffix: "+", label: "Tevreden klanten" },
-  { icon: Paintbrush, value: 1000, suffix: "+", label: "Projecten voltooid" },
+  { icon: CheckCircle, value: 100, suffix: "%", label: "Strak resultaat" },
+  { icon: ThumbsUp, value: 99, suffix: "%", label: "Klanttevredenheid" },
 ];
 
 function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {

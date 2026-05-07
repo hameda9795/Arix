@@ -76,7 +76,7 @@ export default function BeforeAfter() {
           >
             {/* After image (full) */}
             <img
-              src="/images/project5.jpg"
+              src="/images/binnen-na.png"
               alt="Na"
               className="absolute inset-0 w-full h-full object-contain"
               draggable={false}
@@ -88,7 +88,7 @@ export default function BeforeAfter() {
               style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
             >
               <img
-                src="/images/project1.jpg"
+                src="/images/binnen-voor.png"
                 alt="Voor"
                 className="absolute inset-0 w-full h-full object-contain"
                 draggable={false}

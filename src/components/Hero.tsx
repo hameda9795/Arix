@@ -80,27 +80,6 @@ export default function Hero() {
           Barneveld.
         </motion.p>
 
-        {/* OnderhoudNL Logo - trust badge */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-          className="flex flex-col items-center mb-6 sm:mb-8"
-        >
-          <span className="text-[10px] sm:text-xs text-white/50 uppercase tracking-widest mb-2">
-            Erkend lid van
-          </span>
-          <div className="relative w-28 h-12 sm:w-36 sm:h-14 md:w-40 md:h-16 flex items-center justify-center">
-            <Image
-              src="/images/OnderhoudNL_Standaard_RGB_zonder witruimte.png"
-              alt="OnderhoudNL erkend bedrijf"
-              fill
-              className="object-contain p-1"
-              sizes="(max-width: 640px) 112px, (max-width: 768px) 144px, 160px"
-            />
-          </div>
-        </motion.div>
-
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

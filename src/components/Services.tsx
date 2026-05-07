@@ -9,74 +9,97 @@ import {
   Wallpaper,
   TreePine,
   Sparkles,
-  PenTool,
   ArrowRight,
 } from "lucide-react";
 
 const services = [
   {
-    num: "01",
     title: "Schilderwerk",
     desc: "Binnen- en buitenschilderwerk voor woningen en bedrijfspanden.",
     href: "/diensten/schilderwerk",
     icon: Paintbrush,
-    image: "/images/service-hero-painter.jpeg",
+    image: "/images/services/pexels-photo-10450330.jpeg",
   },
   {
-    num: "02",
     title: "Spuitwerk",
     desc: "Latex spuitwerk voor een egaal resultaat zonder strepen.",
     href: "/diensten/spuitwerk",
     icon: SprayCan,
-    image: "/images/service-project-1.jpeg",
+    image: "/images/services/trinity-place-user-img7e816f8c08345a61_14-3507-1-151043c.jpg",
   },
   {
-    num: "03",
     title: "Behangen",
     desc: "Professioneel behangen met diverse materialen en patronen.",
     href: "/diensten/behangen",
     icon: Wallpaper,
-    image: "/images/project3.jpg",
+    image: "/images/services/idee-carta-da-parati-soggiorno-broken-ocean-ambientha-1024x682-1.jpg",
   },
   {
-    num: "04",
     title: "Houtrot",
     desc: "Specialist in het behandelen en repareren van houtrot.",
     href: "/diensten/houtrot",
     icon: TreePine,
-    image: "/images/service-project-2.jpeg",
+    image: "/images/services/roof-truss-gd323f3df1_1920.jpg.webp",
   },
   {
-    num: "05",
     title: "Sausklaar stucwerk",
     desc: "Muren en plafonds perfect egaal sauzen voor strak resultaat.",
     href: "/diensten/sausklaar-stucwerk",
     icon: Sparkles,
-    image: "/images/project6.jpg",
-  },
-  {
-    num: "06",
-    title: "Kitwerk",
-    desc: "Voegen, naden en kieren duurzaam afgedicht.",
-    href: "/diensten/schilderwerk",
-    icon: PenTool,
-    image: "/images/project4.jpg",
+    image: "/images/services/screenshot-2021-09-20-at-16.06.38.png",
   },
 ];
 
-const container = {
-  hidden: {},
-  show: {
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
+const cardAnimation = {
+  hidden: { opacity: 0, y: 40 },
+  show: { opacity: 1, y: 0 },
 };
 
-const item = {
-  hidden: { opacity: 0, y: 40 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-};
+function ServiceCard({ service, delay }: { service: typeof services[0]; delay: number }) {
+  return (
+    <motion.div
+      variants={cardAnimation}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.5, delay }}
+    >
+      <Link
+        href={service.href}
+        className="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+      >
+        {/* Image */}
+        <div className="relative h-44 sm:h-48 overflow-hidden">
+          <img
+            src={service.image}
+            alt={service.title}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+          {/* Icon */}
+          <div className="absolute bottom-3 right-3 w-9 h-9 rounded-full bg-white/90 flex items-center justify-center">
+            <service.icon className="w-4 h-4 text-gold" />
+          </div>
+        </div>
+
+        {/* Content */}
+        <div className="p-5 sm:p-6">
+          <h3 className="text-text text-lg sm:text-xl font-bold mb-2 group-hover:text-gold transition-colors">
+            {service.title}
+          </h3>
+          <p className="text-text-light text-sm leading-relaxed mb-4">
+            {service.desc}
+          </p>
+          <span className="inline-flex items-center gap-1.5 text-gold font-bold text-xs uppercase tracking-wider">
+            Lees meer
+            <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+          </span>
+        </div>
+      </Link>
+    </motion.div>
+  );
+}
 
 export default function Services() {
   return (
@@ -102,56 +125,19 @@ export default function Services() {
           </motion.div>
         </ScrollReveal>
 
-        {/* Cards Grid */}
-        <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: "-50px" }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6"
-        >
-          {services.map((service) => (
-            <motion.div key={service.num} variants={item}>
-              <Link
-                href={service.href}
-                className="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-              >
-                {/* Image */}
-                <div className="relative h-44 sm:h-48 overflow-hidden">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                  {/* Number badge */}
-                  <span className="absolute top-3 left-3 bg-gold text-white text-[10px] font-bold px-2.5 py-1 rounded-full">
-                    {service.num}
-                  </span>
-                  {/* Icon */}
-                  <div className="absolute bottom-3 right-3 w-9 h-9 rounded-full bg-white/90 flex items-center justify-center">
-                    <service.icon className="w-4 h-4 text-gold" />
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="p-5 sm:p-6">
-                  <h3 className="text-text text-lg sm:text-xl font-bold mb-2 group-hover:text-gold transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-text-light text-sm leading-relaxed mb-4">
-                    {service.desc}
-                  </p>
-                  <span className="inline-flex items-center gap-1.5 text-gold font-bold text-xs uppercase tracking-wider">
-                    Lees meer
-                    <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
-                  </span>
-                </div>
-              </Link>
-            </motion.div>
+        {/* Row 1: 3 items */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+          {services.slice(0, 3).map((service, index) => (
+            <ServiceCard key={service.title} service={service} delay={index * 0.1} />
           ))}
-        </motion.div>
+        </div>
+
+        {/* Row 2: 2 items centered */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 max-w-2xl xl:max-w-3xl mx-auto mt-5 sm:mt-6">
+          {services.slice(3).map((service, index) => (
+            <ServiceCard key={service.title} service={service} delay={(index + 3) * 0.1} />
+          ))}
+        </div>
       </div>
     </section>
   );

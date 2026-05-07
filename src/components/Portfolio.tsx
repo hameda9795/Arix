@@ -6,10 +6,114 @@ import { ArrowRight } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 
 const projects = [
-  { title: "Trap renovatie - Barneveld", tag: "Trap", image: "/images/project1.jpg", size: "large" },
-  { title: "Houtrot reparatie", tag: "Houtrot", image: "/images/project2.jpg", size: "small" },
-  { title: "Zolder transformatie", tag: "Zolder", image: "/images/project3.jpg", size: "small" },
+  {
+    title: "Trap renovatie - Barneveld",
+    tag: "Trap",
+    before: "/projecten/binnen/trap-voor.jpeg",
+    after: "/projecten/binnen/trap-na.jpeg",
+    size: "large",
+  },
+  {
+    title: "Houtrot reparatie",
+    tag: "Houtrot",
+    before: "/projecten/buiten/houtrot-voor.jpeg",
+    after: "/projecten/buiten/houtrot-na.jpeg",
+    size: "small",
+  },
+  {
+    title: "Buitendeur verven",
+    tag: "Buiten",
+    before: "/projecten/buiten/Buitendeur verven-voor.jpeg",
+    after: "/projecten/buiten/Buitendeur verven-na.jpeg",
+    size: "small",
+  },
 ];
+
+function AutoBeforeAfterCard({
+  before,
+  after,
+  title,
+  tag,
+  className = "",
+}: {
+  before: string;
+  after: string;
+  title: string;
+  tag: string;
+  className?: string;
+}) {
+  return (
+    <Link href="/projecten" className="group relative block rounded-2xl overflow-hidden">
+      <div className={`${className}`}>
+        {/* After image (background) */}
+        <img
+          src={after}
+          alt={`Na - ${title}`}
+          className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+        />
+
+        {/* Before image with auto-animation */}
+        <motion.div
+          className="absolute inset-0 overflow-hidden"
+          initial={{ clipPath: "inset(0 100% 0 0)" }}
+          animate={{
+            clipPath: [
+              "inset(0 100% 0 0)",
+              "inset(0 0% 0 0)",
+              "inset(0 100% 0 0)",
+            ],
+          }}
+          transition={{
+            duration: 5,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        >
+          <img
+            src={before}
+            alt={`Voor - ${title}`}
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        </motion.div>
+
+        {/* Animated divider line */}
+        <motion.div
+          className="absolute top-0 bottom-0 z-10"
+          animate={{ left: ["0%", "100%", "0%"] }}
+          transition={{
+            duration: 5,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        >
+          <div className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-1 bg-white shadow-lg" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-9 h-9 sm:w-10 sm:h-10 bg-white rounded-full shadow-xl flex items-center justify-center">
+            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-text" />
+          </div>
+        </motion.div>
+
+        {/* Labels */}
+        <div className="absolute top-4 left-4 bg-black/60 text-white text-[10px] sm:text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider backdrop-blur-sm z-20">
+          Voor
+        </div>
+        <div className="absolute top-4 right-4 bg-gold text-white text-[10px] sm:text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider z-20">
+          Na
+        </div>
+
+        {/* Bottom gradient + title */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-20" />
+        <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 z-20">
+          <span className="bg-gold text-white text-[10px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wider mb-2 inline-block">
+            {tag}
+          </span>
+          <h4 className="text-white text-lg sm:text-xl font-bold">
+            {title}
+          </h4>
+        </div>
+      </div>
+    </Link>
+  );
+}
 
 export default function Portfolio() {
   return (
@@ -17,23 +121,23 @@ export default function Portfolio() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <ScrollReveal className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 sm:mb-14">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-text tracking-tight font-[family-name:var(--font-serif)]">
-            Onze <span className="text-gold italic">projecten</span>
-          </h2>
-          <Link
-            href="/projecten"
-            className="inline-flex items-center gap-2 text-gold font-bold text-sm border-b-2 border-gold pb-1 hover:text-gold-dark hover:border-gold-dark transition-colors w-fit"
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
           >
-            Bekijk alles
-            <ArrowRight className="w-4 h-4" />
-          </Link>
-        </motion.div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-text tracking-tight font-[family-name:var(--font-serif)]">
+              Onze <span className="text-gold italic">projecten</span>
+            </h2>
+            <Link
+              href="/projecten"
+              className="inline-flex items-center gap-2 text-gold font-bold text-sm border-b-2 border-gold pb-1 hover:text-gold-dark hover:border-gold-dark transition-colors w-fit mt-2"
+            >
+              Bekijk alles
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </motion.div>
         </ScrollReveal>
 
         {/* Grid */}
@@ -46,25 +150,10 @@ export default function Portfolio() {
             transition={{ duration: 0.6 }}
             className="md:col-span-2 lg:col-span-1 lg:row-span-2"
           >
-            <Link href="/projecten" className="group relative block h-72 sm:h-80 lg:h-full min-h-[320px] lg:min-h-[520px] rounded-2xl overflow-hidden">
-              <img
-                src={projects[0].image}
-                alt={projects[0].title}
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                loading="eager"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-              <div className="absolute top-4 sm:top-6 left-4 sm:left-6">
-                <span className="bg-gold text-white text-[10px] sm:text-xs font-bold px-3 sm:px-4 py-1.5 rounded-full uppercase tracking-wider">
-                  {projects[0].tag}
-                </span>
-              </div>
-              <div className="absolute bottom-4 sm:bottom-8 left-4 sm:left-6 right-4 sm:right-6">
-                <h4 className="text-white text-xl sm:text-2xl font-bold">
-                  {projects[0].title}
-                </h4>
-              </div>
-            </Link>
+            <AutoBeforeAfterCard
+              {...projects[0]}
+              className="relative h-72 sm:h-80 lg:h-full min-h-[320px] lg:min-h-[520px]"
+            />
           </motion.div>
 
           {/* Small items */}
@@ -76,28 +165,10 @@ export default function Portfolio() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.15 * (i + 1) }}
             >
-              <Link
-                href="/projecten"
-                className="group relative block h-56 sm:h-64 lg:h-60 rounded-2xl overflow-hidden"
-              >
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  loading="eager"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                <div className="absolute top-4 left-4">
-                  <span className="bg-gold text-white text-[10px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">
-                    {project.tag}
-                  </span>
-                </div>
-                <div className="absolute bottom-4 left-4 right-4">
-                  <h4 className="text-white text-lg font-bold">
-                    {project.title}
-                  </h4>
-                </div>
-              </Link>
+              <AutoBeforeAfterCard
+                {...project}
+                className="relative h-56 sm:h-64 lg:h-60"
+              />
             </motion.div>
           ))}
         </div>
