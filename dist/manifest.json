@@ -1,0 +1,36 @@
+{
+  "name": "ARIX-SCHILDERSBEDRIJF",
+  "short_name": "ARIX",
+  "description": "Professionele schilders in Barneveld, Amersfoort, Utrecht, Veenendaal en Ede. Schilderwerk, spuitwerk, behangen en houtrot reparatie.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#C5A059",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "nl",
+  "icons": [
+    {
+      "src": "/images/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/logo-final.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "home services"],
+  "screenshots": [
+    {
+      "src": "/images/hero-bg.webp",
+      "sizes": "1280x720",
+      "type": "image/webp",
+      "form_factor": "wide",
+      "label": "Professioneel schilderwerk door ARIX-SCHILDERSBEDRIJF"
+    }
+  ]
+}

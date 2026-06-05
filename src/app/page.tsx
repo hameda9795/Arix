@@ -26,7 +26,7 @@ export const metadata: Metadata = {
         url: "/images/hero-bg.webp",
         width: 1200,
         height: 630,
-        alt: "ARIX-SCHILDERSBEDRIJF",
+        alt: "Professioneel schilderwerk door ARIX-SCHILDERSBEDRIJF in Barneveld",
       },
     ],
   },
@@ -42,9 +42,29 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "ARIX-SCHILDERSBEDRIJF",
+  url: "https://arix-schildersbedrijf.nl",
+  logo: "https://arix-schildersbedrijf.nl/images/logo.png",
+  image: "https://arix-schildersbedrijf.nl/images/hero-bg.webp",
+  telephone: "+31645459815",
+  email: "info@arix-schildersbedrijf.nl",
+  sameAs: [],
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Tusolaan 25",
+    addressLocality: "Barneveld",
+    addressRegion: "Gelderland",
+    postalCode: "3772WP",
+    addressCountry: "NL",
+  },
+};
+
 const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": "HomeAndConstructionBusiness",
   name: "ARIX-SCHILDERSBEDRIJF",
   image: "https://arix-schildersbedrijf.nl/images/hero-bg.webp",
   url: "https://arix-schildersbedrijf.nl",
@@ -60,8 +80,8 @@ const localBusinessSchema = {
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: 51.9167,
-    longitude: 5.3167,
+    latitude: 52.1399,
+    longitude: 5.5836,
   },
   priceRange: "€€",
   openingHoursSpecification: [
@@ -72,7 +92,89 @@ const localBusinessSchema = {
       closes: "17:00",
     },
   ],
-  areaServed: "Barneveld, Amersfoort, Utrecht, Veenendaal, Ede",
+  areaServed: [
+    { "@type": "City", name: "Barneveld" },
+    { "@type": "City", name: "Amersfoort" },
+    { "@type": "City", name: "Utrecht" },
+    { "@type": "City", name: "Veenendaal" },
+    { "@type": "City", name: "Ede" },
+  ],
+  serviceType: [
+    "Schilderwerk",
+    "Spuitwerk",
+    "Behangen",
+    "Houtrot reparatie",
+    "Stucwerk",
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Schilderdiensten",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Schilderwerk binnen en buiten",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Latex spuitwerk",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Behangen",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Houtrot reparatie",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Sausklaar stucwerk",
+        },
+      },
+    ],
+  },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://arix-schildersbedrijf.nl/",
+    },
+  ],
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "ARIX-SCHILDERSBEDRIJF",
+  url: "https://arix-schildersbedrijf.nl",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: "https://arix-schildersbedrijf.nl/diensten/{search_term_string}",
+    },
+    "query-input": "required name=search_term_string",
+  },
 };
 
 export default function Home() {
@@ -80,7 +182,19 @@ export default function Home() {
     <>
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
       />
       <Hero />
       <PhotoSlider />

@@ -13,10 +13,10 @@ export const metadata: Metadata = {
       "Neem contact op met ARIX-SCHILDERSBEDRIJF voor een vrijblijvende offerte. Bel +31 6 45459815 of mail naar info@arix-schildersbedrijf.nl.",
     images: [
       {
-        url: "/images/hero-bg.webp",
+        url: "/images/contact-bg.jpg",
         width: 1200,
         height: 630,
-        alt: "ARIX-SCHILDERSBEDRIJF",
+        alt: "Contact opnemen met ARIX-SCHILDERSBEDRIJF in Barneveld",
       },
     ],
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     title: "Contact | Vrijblijvende Offerte Aanvragen",
     description:
       "Neem contact op met ARIX-SCHILDERSBEDRIJF voor een vrijblijvende offerte. Bel +31 6 45459815 of mail naar info@arix-schildersbedrijf.nl.",
-    images: ["/images/hero-bg.webp"],
+    images: ["/images/contact-bg.jpg"],
   },
   alternates: {
     canonical: "/contact",
@@ -56,8 +56,8 @@ const contactPageSchema = {
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: 51.9167,
-      longitude: 5.3167,
+      latitude: 52.1399,
+      longitude: 5.5836,
     },
     priceRange: "€€",
     openingHoursSpecification: [
@@ -72,12 +72,35 @@ const contactPageSchema = {
   },
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://arix-schildersbedrijf.nl/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Contact",
+      item: "https://arix-schildersbedrijf.nl/contact",
+    },
+  ],
+};
+
 export default function ContactPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <ContactForm />
     </>

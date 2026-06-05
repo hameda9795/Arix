@@ -3,52 +3,71 @@ import type { MetadataRoute } from "next";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
+  const baseUrl = "https://arix-schildersbedrijf.nl";
+  const lastModified = new Date();
+
+  const pages: MetadataRoute.Sitemap = [
     {
-      url: "https://arix-schildersbedrijf.nl/",
-      lastModified: new Date(),
-      priority: 1.0,
+      url: `${baseUrl}/`,
+      lastModified,
       changeFrequency: "weekly",
+      priority: 1.0,
     },
     {
-      url: "https://arix-schildersbedrijf.nl/over-ons",
-      lastModified: new Date(),
+      url: `${baseUrl}/over-ons`,
+      lastModified,
+      changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: "https://arix-schildersbedrijf.nl/projecten",
-      lastModified: new Date(),
+      url: `${baseUrl}/projecten`,
+      lastModified,
+      changeFrequency: "weekly",
       priority: 0.8,
     },
     {
-      url: "https://arix-schildersbedrijf.nl/contact",
-      lastModified: new Date(),
+      url: `${baseUrl}/contact`,
+      lastModified,
+      changeFrequency: "monthly",
       priority: 0.9,
     },
     {
-      url: "https://arix-schildersbedrijf.nl/diensten/schilderwerk",
-      lastModified: new Date(),
+      url: `${baseUrl}/diensten`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/diensten/schilderwerk`,
+      lastModified,
+      changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: "https://arix-schildersbedrijf.nl/diensten/spuitwerk",
-      lastModified: new Date(),
+      url: `${baseUrl}/diensten/spuitwerk`,
+      lastModified,
+      changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: "https://arix-schildersbedrijf.nl/diensten/behangen",
-      lastModified: new Date(),
+      url: `${baseUrl}/diensten/behangen`,
+      lastModified,
+      changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: "https://arix-schildersbedrijf.nl/diensten/houtrot",
-      lastModified: new Date(),
+      url: `${baseUrl}/diensten/houtrot`,
+      lastModified,
+      changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: "https://arix-schildersbedrijf.nl/diensten/sausklaar-stucwerk",
-      lastModified: new Date(),
+      url: `${baseUrl}/diensten/sausklaar-stucwerk`,
+      lastModified,
+      changeFrequency: "monthly",
       priority: 0.8,
     },
   ];
+
+  return pages;
 }

@@ -20,6 +20,7 @@ const playfair = Playfair_Display({
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
+  themeColor: "#C5A059",
 };
 
 export const metadata: Metadata = {
@@ -38,7 +39,19 @@ export const metadata: Metadata = {
     "behangen",
     "houtrot",
     "schilderbedrijf",
+    "schilder Barneveld",
+    "binnenschilderwerk",
+    "buitenschilderwerk",
+    "latex spuiten",
+    "stucwerk",
+    "schilder Amersfoort",
+    "schilder Utrecht",
+    "schilder Ede",
+    "schilder Veenendaal",
+    "schildersbedrijf Gelderland",
   ],
+  category: "business",
+  classification: "Schildersbedrijf",
   openGraph: {
     title: {
       template: "%s | ARIX-SCHILDERSBEDRIJF",
@@ -55,7 +68,7 @@ export const metadata: Metadata = {
         url: "/images/hero-bg.webp",
         width: 1200,
         height: 630,
-        alt: "ARIX-SCHILDERSBEDRIJF",
+        alt: "Professioneel schilderwerk door ARIX-SCHILDERSBEDRIJF in Barneveld",
       },
     ],
   },
@@ -72,9 +85,13 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    nocache: false,
     googleBot: {
       index: true,
       follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   authors: [{ name: "ARIX-SCHILDERSBEDRIJF" }],
@@ -82,6 +99,16 @@ export const metadata: Metadata = {
   publisher: "ARIX-SCHILDERSBEDRIJF",
   alternates: {
     canonical: "/",
+    languages: {
+      "nl-NL": "/",
+    },
+  },
+  verification: {
+    google: "hdNoKC2LDxuwvfUxuCzBec2hLmGPma8bAo7",
+  },
+  other: {
+    "msapplication-TileColor": "#C5A059",
+    "msapplication-config": "/browserconfig.xml",
   },
 };
 
@@ -91,7 +118,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="nl" className={`${inter.variable} ${playfair.variable} h-full antialiased`}>
+    <html lang="nl" dir="ltr" className={`${inter.variable} ${playfair.variable} h-full antialiased`}>
+      <head>
+        <link rel="manifest" href="/manifest.json" />
+      </head>
       <body className="min-h-full flex flex-col font-sans">
         <Navbar />
         <main className="flex-1">{children}</main>
