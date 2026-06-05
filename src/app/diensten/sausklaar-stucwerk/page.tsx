@@ -23,7 +23,7 @@ export const metadata: Metadata = {
       "De specialist in sauzen in de regio Barneveld. Muren en plafonds perfect egaal sauzen.",
     images: [
       {
-        url: "/images/services/screenshot-2021-09-20-at-16.06.38.png",
+        url: "/images/services/screenshot-2021-09-20-at-16.06.38.jpg",
         width: 1200,
         height: 630,
         alt: "Sausklaar stucwerk met strak resultaat door ARIX-SCHILDERSBEDRIJF",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     title: "Sausklaar Stucwerk | ARIX-SCHILDERSBEDRIJF Barneveld",
     description:
       "De specialist in sauzen in de regio Barneveld. Muren en plafonds perfect egaal sauzen.",
-    images: ["/images/services/screenshot-2021-09-20-at-16.06.38.png"],
+    images: ["/images/services/screenshot-2021-09-20-at-16.06.38.jpg"],
   },
   alternates: {
     canonical: "/diensten/sausklaar-stucwerk",
@@ -112,7 +112,7 @@ export default function SausklaarStucwerkPage() {
       <ServicePageLayout
         title="Sausklaar-stucwerk"
         subtitle="Arix-schildersbedrijf, de specialist in sauzen in de regio Barneveld"
-        image="/images/services/screenshot-2021-09-20-at-16.06.38.png"
+        image="/images/services/screenshot-2021-09-20-at-16.06.38.jpg"
         description={
           <div className="space-y-16">
             {/* Intro with image */}

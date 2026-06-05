@@ -46,7 +46,7 @@ const services = [
     desc: "Muren en plafonds perfect egaal sauzen voor strak resultaat.",
     href: "/diensten/sausklaar-stucwerk",
     icon: Sparkles,
-    image: "/images/services/screenshot-2021-09-20-at-16.06.38.png",
+    image: "/images/services/screenshot-2021-09-20-at-16.06.38.jpg",
   },
 ];
 
