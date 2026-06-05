@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
@@ -50,31 +49,20 @@ function AutoBeforeAfterCard({
           src={after}
           alt={`Na - ${title}`}
           className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          loading="lazy"
         />
 
         {/* Before image with auto-animation */}
-        <motion.div
-          className="absolute inset-0 overflow-hidden"
-          initial={{ clipPath: "inset(0 100% 0 0)" }}
-          animate={{
-            clipPath: [
-              "inset(0 100% 0 0)",
-              "inset(0 0% 0 0)",
-              "inset(0 100% 0 0)",
-            ],
-          }}
-          transition={{
-            duration: 5,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
+        <div
+          className="absolute inset-0 overflow-hidden animate-before-after"
         >
           <img
             src={before}
             alt={`Voor - ${title}`}
             className="absolute inset-0 w-full h-full object-cover"
+            loading="lazy"
           />
-        </motion.div>
+        </div>
 
         {/* Labels */}
         <div className="absolute top-4 left-4 bg-black/60 text-white text-[10px] sm:text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider backdrop-blur-sm z-20">
@@ -105,12 +93,7 @@ export default function Portfolio() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <ScrollReveal className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 sm:mb-14">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
+          <div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-text tracking-tight font-[family-name:var(--font-serif)]">
               Onze <span className="text-gold italic">projecten</span>
             </h2>
@@ -121,39 +104,27 @@ export default function Portfolio() {
               Bekijk alles
               <ArrowRight className="w-4 h-4" />
             </Link>
-          </motion.div>
+          </div>
         </ScrollReveal>
 
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           {/* Large item */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="md:col-span-2 lg:col-span-1 lg:row-span-2"
-          >
+          <div className="md:col-span-2 lg:col-span-1 lg:row-span-2">
             <AutoBeforeAfterCard
               {...projects[0]}
               className="relative h-72 sm:h-80 lg:h-full min-h-[320px] lg:min-h-[520px]"
             />
-          </motion.div>
+          </div>
 
           {/* Small items */}
-          {projects.slice(1).map((project, i) => (
-            <motion.div
-              key={project.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.15 * (i + 1) }}
-            >
+          {projects.slice(1).map((project) => (
+            <div key={project.title}>
               <AutoBeforeAfterCard
                 {...project}
                 className="relative h-56 sm:h-64 lg:h-60"
               />
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

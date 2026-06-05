@@ -73,13 +73,24 @@ body {
   animation: scrollPulse 2s ease-in-out infinite;
 }
 
-/* Slider infinite scroll */
+/* Slider infinite scroll - for 2x duplication */
 @keyframes slider-scroll {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-33.333%); }
+  100% { transform: translateX(-50%); }
 }
 .animate-slider-scroll {
-  animation: slider-scroll var(--slider-duration, 40s) linear infinite;
+  animation: slider-scroll var(--slider-duration, 35s) linear infinite;
+}
+
+/* Portfolio before/after auto animation */
+@keyframes before-after-reveal {
+  0% { clip-path: inset(0 100% 0 0); }
+  45% { clip-path: inset(0 0% 0 0); }
+  55% { clip-path: inset(0 0% 0 0); }
+  100% { clip-path: inset(0 100% 0 0); }
+}
+.animate-before-after {
+  animation: before-after-reveal 5s ease-in-out infinite;
 }
 
 /* Selection color */

@@ -1,37 +1,24 @@
 "use client";
 
-import { useRef, useEffect, useState } from "react";
+import { useRef } from "react";
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 
 const sliderImages = [
-  "/slider/1.png",
-  "/slider/2.png",
-  "/slider/3.png",
-  "/slider/4.png",
-  "/slider/5.png",
-  "/slider/6.png",
+  "/slider/1.jpg",
+  "/slider/2.jpg",
+  "/slider/3.jpg",
+  "/slider/4.jpg",
+  "/slider/5.jpg",
+  "/slider/6.jpg",
 ];
 
 export default function PhotoSlider() {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const [duration, setDuration] = useState(40);
 
-  useEffect(() => {
-    const updateDuration = () => {
-      const width = window.innerWidth;
-      if (width < 640) setDuration(25);
-      else if (width < 1024) setDuration(35);
-      else setDuration(45);
-    };
-    updateDuration();
-    window.addEventListener("resize", updateDuration);
-    return () => window.removeEventListener("resize", updateDuration);
-  }, []);
-
-  // Duplicate images for seamless infinite loop
-  const allImages = [...sliderImages, ...sliderImages, ...sliderImages];
+  // Duplicate images for seamless infinite loop (2x is enough)
+  const allImages = [...sliderImages, ...sliderImages];
 
   return (
     <section
@@ -65,16 +52,14 @@ export default function PhotoSlider() {
           className="flex gap-4 sm:gap-6 w-max animate-slider-scroll hover:[animation-play-state:paused]"
           style={
             {
-              "--slider-duration": `${duration}s`,
+              "--slider-duration": `35s`,
             } as React.CSSProperties
           }
         >
           {allImages.map((src, i) => (
-            <motion.div
+            <div
               key={i}
-              className="relative flex-shrink-0 w-64 sm:w-80 md:w-96 aspect-[4/3] rounded-2xl overflow-hidden shadow-lg shadow-black/10 cursor-pointer"
-              whileHover={{ scale: 1.03, y: -4 }}
-              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              className="relative flex-shrink-0 w-64 sm:w-80 md:w-96 aspect-[4/3] rounded-2xl overflow-hidden shadow-lg shadow-black/10 cursor-pointer hover:scale-[1.03] hover:-translate-y-1 transition-transform duration-300"
             >
               <Image
                 src={src}
@@ -82,10 +67,11 @@ export default function PhotoSlider() {
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 640px) 256px, (max-width: 768px) 320px, 384px"
+                loading="lazy"
               />
               {/* Subtle overlay on hover */}
               <div className="absolute inset-0 bg-gold/0 hover:bg-gold/10 transition-colors duration-500" />
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

@@ -121,6 +121,7 @@ export default function RootLayout({
     <html lang="nl" dir="ltr" className={`${inter.variable} ${playfair.variable} h-full antialiased`}>
       <head>
         <link rel="manifest" href="/manifest.json" />
+        <link rel="preload" href="/images/hero-bg.webp" as="image" type="image/webp" />
       </head>
       <body className="min-h-full flex flex-col font-sans">
         <Navbar />

@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useRef, useCallback } from "react";
-import { motion } from "framer-motion";
 import { MoveHorizontal } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 
@@ -40,13 +39,7 @@ export default function BeforeAfter() {
   return (
     <section className="bg-white py-16 sm:py-24 lg:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-10 sm:mb-14"
-        >
+        <div className="text-center mb-10 sm:mb-14">
           <span className="text-gold text-xs sm:text-sm font-bold uppercase tracking-[0.2em] mb-3 block">
             Resultaat
           </span>
@@ -56,15 +49,9 @@ export default function BeforeAfter() {
           <p className="text-text-light text-sm sm:text-base max-w-md mx-auto mt-3">
             Sleep de slider om het verschil te zien dat wij maken
           </p>
-        </motion.div>
+        </div>
 
         <ScrollReveal className="max-w-4xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-        >
           <div
             ref={containerRef}
             className="relative aspect-[16/10] rounded-2xl overflow-hidden cursor-ew-resize select-none shadow-2xl shadow-black/10 bg-neutral-900"
@@ -80,6 +67,7 @@ export default function BeforeAfter() {
               alt="Na"
               className="absolute inset-0 w-full h-full object-contain"
               draggable={false}
+              loading="lazy"
             />
 
             {/* Before image (clipped) */}
@@ -92,6 +80,7 @@ export default function BeforeAfter() {
                 alt="Voor"
                 className="absolute inset-0 w-full h-full object-contain"
                 draggable={false}
+                loading="lazy"
               />
               <div className="absolute inset-0 bg-black/10" />
             </div>
@@ -119,7 +108,6 @@ export default function BeforeAfter() {
               </div>
             </div>
           </div>
-        </motion.div>
         </ScrollReveal>
       </div>
     </section>
