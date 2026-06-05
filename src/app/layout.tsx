@@ -104,7 +104,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "hdNoKC2LDxuwvfUxuCzBec2hLmGPma8bAo7",
+    google: "hdNoKC2LDxuwvfUxuCzBec2hLmGPma8bAo7HpKi9iSE",
   },
   other: {
     "msapplication-TileColor": "#C5A059",
