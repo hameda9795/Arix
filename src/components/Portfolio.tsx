@@ -76,22 +76,6 @@ function AutoBeforeAfterCard({
           />
         </motion.div>
 
-        {/* Animated divider line */}
-        <motion.div
-          className="absolute top-0 bottom-0 z-10"
-          animate={{ left: ["0%", "100%", "0%"] }}
-          transition={{
-            duration: 5,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        >
-          <div className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-1 bg-white shadow-lg" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-9 h-9 sm:w-10 sm:h-10 bg-white rounded-full shadow-xl flex items-center justify-center">
-            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-text" />
-          </div>
-        </motion.div>
-
         {/* Labels */}
         <div className="absolute top-4 left-4 bg-black/60 text-white text-[10px] sm:text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider backdrop-blur-sm z-20">
           Voor
