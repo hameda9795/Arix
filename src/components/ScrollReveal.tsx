@@ -1,7 +1,6 @@
 "use client";
 
-import { useRef, ReactNode } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef, useState, useEffect, ReactNode } from "react";
 
 interface ScrollRevealProps {
   children: ReactNode;
@@ -15,16 +14,38 @@ export default function ScrollReveal({
   yOffset = 40,
 }: ScrollRevealProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
+  const [isVisible, setIsVisible] = useState(false);
 
-  const y = useTransform(scrollYProgress, [0, 0.5, 1], [yOffset, 0, -yOffset / 2]);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(el);
+        }
+      },
+      { threshold: 0.1, rootMargin: "-50px" }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <motion.div ref={ref} style={{ y }} className={className}>
+    <div
+      ref={ref}
+      className={className}
+      style={{
+        opacity: isVisible ? 1 : 0,
+        transform: isVisible ? "translateY(0)" : `translateY(${yOffset}px)`,
+        transition: "opacity 0.6s ease-out, transform 0.6s ease-out",
+        willChange: "opacity, transform",
+      }}
+    >
       {children}
-    </motion.div>
+    </div>
   );
 }

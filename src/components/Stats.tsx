@@ -1,7 +1,6 @@
 "use client";
 
 import { useRef, useEffect, useState } from "react";
-import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { Calendar, Award, CheckCircle, ThumbsUp } from "lucide-react";
 
 const stats = [
@@ -13,11 +12,29 @@ const stats = [
 
 function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
   const [count, setCount] = useState(0);
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
+  const [hasStarted, setHasStarted] = useState(false);
+  const ref = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
-    if (!isInView) return;
+    const el = ref.current;
+    if (!el || hasStarted) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setHasStarted(true);
+          observer.unobserve(el);
+        }
+      },
+      { rootMargin: "-50px" }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [hasStarted]);
+
+  useEffect(() => {
+    if (!hasStarted) return;
     let start = 0;
     const duration = 2000;
     const increment = value / (duration / 16);
@@ -31,7 +48,7 @@ function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
       }
     }, 16);
     return () => clearInterval(timer);
-  }, [isInView, value]);
+  }, [hasStarted, value]);
 
   return (
     <span ref={ref}>
@@ -43,12 +60,21 @@ function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
 
 export default function Stats() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end start"],
-  });
+  const [scrollY, setScrollY] = useState(0);
 
-  const bgY = useTransform(scrollYProgress, [0, 1], ["-15%", "15%"]);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!containerRef.current) return;
+      const rect = containerRef.current.getBoundingClientRect();
+      const progress = Math.max(0, Math.min(1, -rect.top / rect.height + 1));
+      setScrollY(progress);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const bgY = (scrollY - 0.5) * 30;
 
   return (
     <section
@@ -57,37 +83,31 @@ export default function Stats() {
     >
       {/* Background Image with Parallax */}
       <div className="absolute inset-0 overflow-hidden">
-        <motion.div className="absolute inset-[-20%] w-[140%] h-[140%]" style={{ y: bgY }}>
+        <div
+          className="absolute inset-[-20%] w-[140%] h-[140%] will-change-transform"
+          style={{ transform: `translateY(${bgY}%)` }}
+        >
           <img
             src="/images/contact-bg.jpg"
             alt=""
             className="w-full h-full object-cover"
+            loading="lazy"
           />
-        </motion.div>
+        </div>
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/75 to-black/85" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12 sm:mb-16"
-        >
+        <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight font-[family-name:var(--font-serif)]">
             Cijfers die <span className="text-gold italic">spreken</span>
           </h2>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-          {stats.map((stat, i) => (
-            <motion.div
+          {stats.map((stat) => (
+            <div
               key={stat.label}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
               className="text-center"
             >
               <div className="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-4 sm:mb-5 rounded-2xl bg-gold/15 flex items-center justify-center border border-gold/20">
@@ -99,7 +119,7 @@ export default function Stats() {
               <p className="text-white/50 text-xs sm:text-sm font-medium">
                 {stat.label}
               </p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

@@ -1,12 +1,11 @@
 "use client";
 
-import { useRef, ReactNode } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef, useEffect, useState, ReactNode } from "react";
 
 interface ParallaxSectionProps {
   children: ReactNode;
   className?: string;
-  speed?: number; // 0.5 = slower, 1 = normal, 1.5 = faster
+  speed?: number;
   direction?: "up" | "down";
 }
 
@@ -17,17 +16,28 @@ export default function ParallaxSection({
   direction = "up",
 }: ParallaxSectionProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
+  const [scrollY, setScrollY] = useState(0);
 
-  const yValue = direction === "up" ? `${speed * 100}%` : `-${speed * 100}%`;
-  const y = useTransform(scrollYProgress, [0, 1], [yValue, `-${yValue}`]);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!ref.current) return;
+      const rect = ref.current.getBoundingClientRect();
+      const progress = Math.max(0, Math.min(1, -rect.top / rect.height + 1));
+      setScrollY(progress);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const multiplier = direction === "up" ? -1 : 1;
+  const y = (scrollY - 0.5) * speed * 100 * multiplier;
 
   return (
     <div ref={ref} className={`overflow-hidden ${className}`}>
-      <motion.div style={{ y }}>{children}</motion.div>
+      <div className="will-change-transform" style={{ transform: `translateY(${y}%)` }}>
+        {children}
+      </div>
     </div>
   );
 }
