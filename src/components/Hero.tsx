@@ -101,6 +101,38 @@ export default function Hero() {
             <ArrowDown className="w-4 h-4" />
           </Link>
         </motion.div>
+
+        {/* Desktop OnderhoudNL Logo - positioned to the right of content */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+          className="hidden xl:block absolute -right-24 2xl:-right-28 top-1/2 -translate-y-1/2"
+        >
+          <Image
+            src="/images/OnderhoudNL_Standaard_RGB_zonder witruimte.png"
+            alt="OnderhoudNL erkend schilder"
+            width={120}
+            height={120}
+            className="w-20 2xl:w-24 h-auto"
+          />
+        </motion.div>
+      </motion.div>
+
+      {/* Mobile OnderhoudNL Logo */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+        className="absolute z-10 right-4 bottom-20 xl:hidden"
+      >
+        <Image
+          src="/images/OnderhoudNL_Standaard_RGB_zonder witruimte.png"
+          alt="OnderhoudNL erkend schilder"
+          width={120}
+          height={120}
+          className="w-16 h-auto"
+        />
       </motion.div>
 
       {/* Paint drip bottom */}
