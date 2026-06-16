@@ -47,7 +47,7 @@ const organizationSchema = {
   "@type": "Organization",
   name: "ARIX-SCHILDERSBEDRIJF",
   url: "https://arix-schildersbedrijf.nl",
-  logo: "https://arix-schildersbedrijf.nl/images/logo.png",
+  logo: "https://arix-schildersbedrijf.nl/images/arix-logo.png",
   image: "https://arix-schildersbedrijf.nl/images/hero-bg.webp",
   telephone: "+31645459815",
   email: "info@arix-schildersbedrijf.nl",

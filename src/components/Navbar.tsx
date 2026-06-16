@@ -62,18 +62,18 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-24 sm:h-28">
+        <div className="flex items-center justify-between h-36 sm:h-40 lg:h-48">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 z-50">
             <img
-              src={scrolled ? "/images/logo.png" : "/images/logo-white.png"}
+              src={scrolled ? "/images/arix-logo-dark.png" : "/images/arix-logo.png"}
               alt="ARIX-SCHILDERSBEDRIJF"
-              className="hidden sm:block h-20 lg:h-24 transition-all duration-300"
+              className="hidden sm:block h-36 lg:h-44 w-auto transition-all duration-300"
             />
             <img
-              src={scrolled ? "/images/logo.png" : "/images/logo-white.png"}
+              src={scrolled ? "/images/arix-logo-dark.png" : "/images/arix-logo.png"}
               alt="ARIX-SCHILDERSBEDRIJF"
-              className="sm:hidden h-16 transition-all duration-300"
+              className="sm:hidden h-32 w-auto transition-all duration-300"
             />
           </Link>
 
@@ -218,7 +218,7 @@ export default function Navbar() {
             transition={{ duration: 0.2 }}
             className="md:hidden absolute top-0 left-0 right-0 bg-white shadow-xl border-b border-gold/10"
           >
-            <div className="px-4 pt-24 pb-8 space-y-1">
+            <div className="px-4 pt-40 pb-8 space-y-1">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}

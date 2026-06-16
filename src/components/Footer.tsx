@@ -28,9 +28,9 @@ export default function Footer() {
           <div className="sm:col-span-2 lg:col-span-1">
             <Link href="/" className="inline-block mb-4">
               <img
-                src="/images/logo-white.png"
+                src="/images/arix-logo.png"
                 alt="ARIX-SCHILDERSBEDRIJF"
-                className="h-32 sm:h-36"
+                className="h-28 sm:h-32 w-auto"
               />
             </Link>
             <p className="text-white/50 text-sm leading-relaxed max-w-xs">

@@ -27,7 +27,7 @@ export default function Hero() {
   return (
     <section
       ref={containerRef}
-      className="relative min-h-[100dvh] flex items-start sm:items-center justify-center overflow-hidden pt-24 sm:pt-0"
+      className="relative min-h-[100dvh] flex items-start sm:items-center justify-center overflow-hidden pt-40 sm:pt-0"
     >
       {/* Background Image - Rendered immediately without JS dependency */}
       <div className="absolute inset-0 overflow-hidden">
